@@ -121,6 +121,17 @@
                             <h4 class="mb-4 text-dark fw-bold"><i class="fas fa-plus-circle text-primary me-2"></i> Create New Service</h4>
                             
                             <div class="mb-4">
+                                <label class="form-label">Category <span class="text-danger">*</span></label>
+                                <select name="category_id" class="form-select shadow-none" required>
+                                    <option value="">Select Category</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('category_id') <small class="text-danger">{{ $message }}</small> @enderror
+                            </div>
+
+                            <div class="mb-4">
                                 <label class="form-label">Service Name <span class="text-danger">*</span></label>
                                 <input type="text" name="name" class="form-control" placeholder="e.g. VIP Shadow Protection" value="{{ old('name') }}" required>
                                 @error('name') <small class="text-danger">{{ $message }}</small> @enderror

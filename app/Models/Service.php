@@ -10,6 +10,7 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
+        'category_id',
         'name',
         'slug',
         'short_description',
@@ -17,6 +18,14 @@ class Service extends Model
         'feature_image',
         'status',
     ];
+
+    /**
+     * Get the category that owns the service.
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 
     /**
      * Get the galleries for the service.

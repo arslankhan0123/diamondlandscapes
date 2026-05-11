@@ -106,6 +106,14 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle arrow-none" href="{{route('categories.index')}}"
+                                id="topnav-categories" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="icon nav-icon" data-feather="grid"></i>
+                                <span data-key="t-categories">Categories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle arrow-none" href="{{route('services.index')}}" id="topnav-apps" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="icon nav-icon" data-feather="briefcase"></i>

@@ -7,6 +7,7 @@ use App\Models\Service;
 use App\Models\ServiceFaq;
 use App\Models\ServiceGallery;
 use App\Models\ServiceHighlight;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -27,7 +28,8 @@ class ServicesController extends Controller
      */
     public function create()
     {
-        return view('admin.services.create');
+        $categories = Category::where('status', 'active')->get();
+        return view('admin.services.create', compact('categories'));
     }
 
     /**
@@ -36,6 +38,7 @@ class ServicesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',
@@ -45,6 +48,7 @@ class ServicesController extends Controller
         ]);
 
         $service = new Service();
+        $service->category_id = $request->category_id;
         $service->name = $request->name;
         $service->slug = Str::slug($request->name);
         $service->short_description = $request->short_description;
@@ -109,7 +113,8 @@ class ServicesController extends Controller
     public function edit($id)
     {
         $service = Service::with('galleries', 'faqs', 'highlights')->findOrFail($id);
-        return view('admin.services.edit', compact('service'));
+        $categories = Category::where('status', 'active')->get();
+        return view('admin.services.edit', compact('service', 'categories'));
     }
 
     /**
@@ -118,6 +123,7 @@ class ServicesController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',
@@ -127,6 +133,7 @@ class ServicesController extends Controller
         ]);
 
         $service = Service::findOrFail($id);
+        $service->category_id = $request->category_id;
         $service->name = $request->name;
         $service->slug = Str::slug($request->name);
         $service->short_description = $request->short_description;
