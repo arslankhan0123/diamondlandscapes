@@ -84,6 +84,72 @@
         color: #555555 !important;
         background: transparent !important;
     }
+
+    /* Contact Info Cards Redesign - Dark Theme */
+    .rts-contact-info-area {
+        background: #ffffff !important;
+    }
+    .single-contact-info {
+        background: #002524 !important; /* Deep Dark Green */
+        padding: 40px 30px !important;
+        border-radius: 16px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    .single-contact-info:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 20px 40px rgba(0, 37, 36, 0.2) !important;
+        background: #003635 !important; /* Slightly lighter on hover */
+        border-color: #34A853 !important;
+    }
+    .single-contact-info .icon {
+        width: 60px !important;
+        height: 60px !important;
+        background: rgba(52, 168, 83, 0.1) !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 25px !important;
+        transition: all 0.3s ease !important;
+        border: 1px solid rgba(52, 168, 83, 0.2) !important;
+    }
+    .single-contact-info .icon svg path {
+        stroke: #34A853 !important;
+    }
+    .single-contact-info:hover .icon {
+        background: #34A853 !important;
+        border-color: #34A853 !important;
+    }
+    .single-contact-info:hover .icon svg path {
+        stroke: #ffffff !important;
+    }
+    .single-contact-info .content .title {
+        display: block !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #34A853 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 12px !important;
+    }
+    .single-contact-info .content a {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+        line-height: 1.3 !important;
+        display: block !important;
+    }
+    .single-contact-info .content a:hover {
+        color: #34A853 !important;
+    }
 </style>
 <!-- rts breadcrumb area start -->
 <section class="rts__breadcrumb__area bg-light ">
@@ -128,7 +194,7 @@
 @endif
 
 <!-- rts contact info area start -->
-<div class="rts-contact-info-area py-100 bg-light ">
+<div class="rts-contact-info-area py-100">
     <div class="container-1428">
         <div class="rts-contact-info-wrapper">
             <div class="row g-30">
@@ -184,7 +250,7 @@
 <!-- rts contact info area end -->
 
 <!-- rts contact area start -->
-<section class="rts__contact__area rts-section-gapBottom  bg-light ">
+<section class="rts__contact__area rts-section-gapBottom">
     <div class="container-1428">
         <div class="rts__contact__wrapper">
             <div class="row gy-5 align-items-end">
