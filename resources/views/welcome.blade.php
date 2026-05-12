@@ -21,9 +21,9 @@
         <div class="rts-banner-wrapper-two">
             <div class="banner-content">
                 <span class="icon"><img src="https://html.themewant.com/greenaro/assets/images/banner/sun.webp" width="60" alt="sun"></span>
-                <h1 class="banner-title rts-text-anime">Reliable Solar Power for <br> Homes & Businesses </h1>
-                <p class="desc">Switch to clean, renewable energy with advanced solar solutions designed for efficiency and long-term savings. We help homeowners and businesses reduce energy costs while contributing to a more sustainable future.</p>
-                <a href="contact.html" class="rts-btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                <h1 class="banner-title rts-text-anime">Premium Landscaping for <br> Homes & Businesses </h1>
+                <p class="desc">Transform your outdoor space with expert landscaping and maintenance solutions. From stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
+                <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="banner-reivew">
                 <div class="banner-play-icon">
@@ -50,52 +50,44 @@
     <div class="container-1428">
         <div class="section-title text-center">
             <span class="sub-title">Our Services</span>
-            <h2 class="heading-title-two rts-text-anime">Powering Your Future with Our Services</h2>
-            <p class="desc">We provide end-to-end solar energy solutions designed to maximize efficiency, reduce costs, and support your transition to renewable energy.</p>
+            <h2 class="heading-title-two rts-text-anime">Comprehensive Outdoor Solutions</h2>
+            <p class="desc">We offer a wide range of landscaping and property maintenance services designed to enhance the beauty and value of your property.</p>
         </div>
         <div class="rts-service-wrapper-two">
             <div class="single-service-item">
                 <div class="icon">
-                    <svg width="42" height="49" viewBox="0 0 42 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.75 31.875H20.625V45C20.625 45.9946 20.2299 46.9484 19.5266 47.6516C18.8234 48.3549 17.8696 48.75 16.875 48.75H3.75C2.75544 48.75 1.80161 48.3549 1.09835 47.6516C0.395088 46.9484 0 45.9946 0 45V35.625C0 34.6304 0.395088 33.6766 1.09835 32.9734C1.80161 32.2701 2.75544 31.875 3.75 31.875ZM16.875 0H3.75C2.75544 0 1.80161 0.395088 1.09835 1.09835C0.395088 1.80161 0 2.75544 0 3.75V13.125C0 14.1196 0.395088 15.0734 1.09835 15.7766C1.80161 16.4799 2.75544 16.875 3.75 16.875H20.625V3.75C20.625 2.75544 20.2299 1.80161 19.5266 1.09835C18.8234 0.395088 17.8696 0 16.875 0ZM37.5 16.875H20.625V31.875H37.5C38.4946 31.875 39.4484 31.4799 40.1516 30.7766C40.8549 30.0734 41.25 29.1196 41.25 28.125V20.625C41.25 19.6304 40.8549 18.6766 40.1516 17.9734C39.4484 17.2701 38.4946 16.875 37.5 16.875Z" fill="#0D0D0D" />
-                    </svg>
+                    <i class="fa-solid fa-trowel-bricks" style="font-size: 32px; color: #0D0D0D;"></i>
                 </div>
                 <div class="content">
-                    <h3 class="title"><a href="service-details.html">Residential Solar</a></h3>
-                    <p class="desc">Smart solar systems tailored for homeowners to reduce electricity bills and increase property value with clean energy.</p>
+                    <h3 class="title"><a href="{{ route('services') }}">Hardscape Services</a></h3>
+                    <p class="desc">Expert construction of patios, paving stones, retaining walls, and walkways to create durable outdoor living spaces.</p>
                 </div>
             </div>
             <div class="single-service-item">
                 <div class="icon">
-                    <svg width="45" height="42" viewBox="0 0 45 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M43.125 0H1.875C1.37772 0 0.900806 0.197544 0.549175 0.549175C0.197544 0.900806 0 1.37772 0 1.875V37.5C0 38.4946 0.395088 39.4484 1.09835 40.1516C1.80161 40.8549 2.75544 41.25 3.75 41.25H13.125C14.1196 41.25 15.0734 40.8549 15.7766 40.1516C16.4799 39.4484 16.875 38.4946 16.875 37.5V26.25H28.125V30C28.125 30.9946 28.5201 31.9484 29.2234 32.6516C29.9266 33.3549 30.8804 33.75 31.875 33.75H41.25C42.2446 33.75 43.1984 33.3549 43.9016 32.6516C44.6049 31.9484 45 30.9946 45 30V1.875C45 1.37772 44.8025 0.900806 44.4508 0.549175C44.0992 0.197544 43.6223 0 43.125 0ZM13.125 37.5H3.75V18.75H13.125V37.5ZM13.125 15H3.75V3.75H13.125V15ZM28.125 22.5H16.875V3.75H28.125V22.5ZM41.25 30H31.875V18.75H41.25V30ZM41.25 15H31.875V3.75H41.25V15Z" fill="#0D0D0D" />
-                    </svg>
+                    <i class="fa-solid fa-seedling" style="font-size: 32px; color: #0D0D0D;"></i>
                 </div>
                 <div class="content">
-                    <h3 class="title"><a href="service-details.html">Commercial & Industrial</a></h3>
-                    <p class="desc">High-performance solar installations built for businesses and industries seeking energy independence and operational savings.</p>
+                    <h3 class="title"><a href="{{ route('services') }}">Commercial Property Maintenance</a></h3>
+                    <p class="desc">Professional lawn care, seasonal cleanups, snow removal, and ongoing maintenance for commercial properties.</p>
                 </div>
             </div>
             <div class="single-service-item">
                 <div class="icon">
-                    <svg width="35" height="49" viewBox="0 0 35 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.90625 0C3.66328 0 0 4.62656 0 11.25C0 17.8734 3.66328 22.5 8.90625 22.5C14.1492 22.5 17.8125 17.8734 17.8125 11.25C17.8125 4.62656 14.1492 0 8.90625 0ZM8.90625 18.75C4.83516 18.75 3.75 14.0367 3.75 11.25C3.75 8.46328 4.83516 3.75 8.90625 3.75C12.9773 3.75 14.0625 8.46328 14.0625 11.25C14.0625 14.0367 12.9773 18.75 8.90625 18.75ZM25.7812 26.25C20.5383 26.25 16.875 30.8766 16.875 37.5C16.875 44.1234 20.5383 48.75 25.7812 48.75C31.0242 48.75 34.6875 44.1234 34.6875 37.5C34.6875 30.8766 31.0242 26.25 25.7812 26.25ZM25.7812 45C21.7102 45 20.625 40.2867 20.625 37.5C20.625 34.7133 21.7102 30 25.7812 30C29.8523 30 30.9375 34.7133 30.9375 37.5C30.9375 40.2867 29.8523 45 25.7812 45ZM20.8594 5.91094C20.7398 5.69565 20.6637 5.45891 20.6356 5.21423C20.6075 4.96956 20.6279 4.72174 20.6956 4.48494C20.7633 4.24814 20.8769 4.02699 21.0301 3.83413C21.1833 3.64127 21.373 3.48048 21.5883 3.36094L27.2133 0.236719C27.4987 0.0779056 27.8206 -0.00360395 28.1472 0.000261962C28.4738 0.00412787 28.7937 0.093235 29.0752 0.258759C29.3568 0.424284 29.5902 0.660484 29.7524 0.943969C29.9146 1.22745 30 1.54839 30 1.875V20.625C30 21.1223 29.8025 21.5992 29.4508 21.9508C29.0992 22.3025 28.6223 22.5 28.125 22.5C27.6277 22.5 27.1508 22.3025 26.7992 21.9508C26.4475 21.5992 26.25 21.1223 26.25 20.625V5.0625L23.4094 6.63984C23.1941 6.75946 22.9573 6.8355 22.7127 6.8636C22.468 6.89171 22.2202 6.87134 21.9834 6.80365C21.7466 6.73596 21.5254 6.62228 21.3326 6.46911C21.1397 6.31593 20.9789 6.12627 20.8594 5.91094ZM11.25 28.125V46.875C11.25 47.3723 11.0525 47.8492 10.7008 48.2008C10.3492 48.5525 9.87228 48.75 9.375 48.75C8.87772 48.75 8.40081 48.5525 8.04918 48.2008C7.69754 47.8492 7.5 47.3723 7.5 46.875V31.3125L4.65937 32.8898C4.22425 33.131 3.71115 33.1895 3.23293 33.0523C2.75471 32.9152 2.35056 32.5937 2.10938 32.1586C1.86819 31.7235 1.80974 31.2104 1.94688 30.7321C2.08401 30.2539 2.4055 29.8498 2.84063 29.6086L8.46563 26.4844C8.75113 26.326 9.07302 26.245 9.39947 26.2492C9.72591 26.2535 10.0456 26.3429 10.3269 26.5087C10.6081 26.6744 10.8413 26.9107 11.0032 27.1942C11.1651 27.4777 11.2502 27.7985 11.25 28.125Z" fill="#0D0D0D" />
-                    </svg>
+                    <i class="fa-solid fa-droplet" style="font-size: 32px; color: #0D0D0D;"></i>
                 </div>
                 <div class="content">
-                    <h3 class="title"><a href="service-details.html">Solar Panel Installation</a></h3>
-                    <p class="desc">Professional installation services ensuring optimal system performance, safety, and long-term reliability.</p>
+                    <h3 class="title"><a href="{{ route('services') }}">Irrigation Services</a></h3>
+                    <p class="desc">Installation and maintenance of irrigation systems, sprinkler repairs, spring start-ups, and fall blowouts.</p>
                 </div>
             </div>
             <div class="single-service-item">
                 <div class="icon">
-                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M41.25 1.875V13.125C41.25 13.6223 41.0525 14.0992 40.7008 14.4508C40.3492 14.8025 39.8723 15 39.375 15C38.8777 15 38.4008 14.8025 38.0492 14.4508C37.6975 14.0992 37.5 13.6223 37.5 13.125V6.40078L27.5766 16.3266C27.2247 16.6784 26.7476 16.876 26.25 16.876C25.7524 16.876 25.2753 16.6784 24.9234 16.3266C24.5716 15.9747 24.374 15.4976 24.374 15C24.374 14.5024 24.5716 14.0253 24.9234 13.6734L34.8492 3.75H28.125C27.6277 3.75 27.1508 3.55246 26.7992 3.20082C26.4475 2.84919 26.25 2.37228 26.25 1.875C26.25 1.37772 26.4475 0.900806 26.7992 0.549175C27.1508 0.197544 27.6277 0 28.125 0H39.375C39.8723 0 40.3492 0.197544 40.7008 0.549175C41.0525 0.900806 41.25 1.37772 41.25 1.875ZM13.6734 24.9234L3.75 34.8492V28.125C3.75 27.6277 3.55246 27.1508 3.20082 26.7992C2.84919 26.4475 2.37228 26.25 1.875 26.25C1.37772 26.25 0.900806 26.4475 0.549175 26.7992C0.197544 27.1508 0 27.6277 0 28.125V39.375C0 39.8723 0.197544 40.3492 0.549175 40.7008C0.900806 41.0525 1.37772 41.25 1.875 41.25H13.125C13.6223 41.25 14.0992 41.0525 14.4508 40.7008C14.8025 40.3492 15 39.8723 15 39.375C15 38.8777 14.8025 38.4008 14.4508 38.0492C14.0992 37.6975 13.6223 37.5 13.125 37.5H6.40078L16.3266 27.5766C16.6784 27.2247 16.876 26.7476 16.876 26.25C16.876 25.7524 16.6784 25.2753 16.3266 24.9234C15.9747 24.5716 15.4976 24.374 15 24.374C14.5024 24.374 14.0253 24.5716 13.6734 24.9234ZM39.375 26.25C38.8777 26.25 38.4008 26.4475 38.0492 26.7992C37.6975 27.1508 37.5 27.6277 37.5 28.125V34.8492L27.5766 24.9234C27.2247 24.5716 26.7476 24.374 26.25 24.374C25.7524 24.374 25.2753 24.5716 24.9234 24.9234C24.5716 25.2753 24.374 25.7524 24.374 26.25C24.374 26.7476 24.5716 27.2247 24.9234 27.5766L34.8492 37.5H28.125C27.6277 37.5 27.1508 37.6975 26.7992 38.0492C26.4475 38.4008 26.25 38.8777 26.25 39.375C26.25 39.8723 26.4475 40.3492 26.7992 40.7008C27.1508 41.0525 27.6277 41.25 28.125 41.25H39.375C39.8723 41.25 40.3492 41.0525 40.7008 40.7008C41.0525 40.3492 41.25 39.8723 41.25 39.375V28.125C41.25 27.6277 41.0525 27.1508 40.7008 26.7992C40.3492 26.4475 39.8723 26.25 39.375 26.25ZM6.40078 3.75H13.125C13.6223 3.75 14.0992 3.55246 14.4508 3.20082C14.8025 2.84919 15 2.37228 15 1.875C15 1.37772 14.8025 0.900806 14.4508 0.549175C14.0992 0.197544 13.6223 0 13.125 0H1.875C1.37772 0 0.900806 0.197544 0.549175 0.549175C0.197544 0.900806 0 1.37772 0 1.875V13.125C0 13.6223 0.197544 14.0992 0.549175 14.4508C0.900806 14.8025 1.37772 15 1.875 15C2.37228 15 2.84919 14.8025 3.20082 14.4508C3.55246 14.0992 3.75 13.6223 3.75 13.125V6.40078L13.6734 16.3266C14.0253 16.6784 14.5024 16.876 15 16.876C15.4976 16.876 15.9747 16.6784 16.3266 16.3266C16.6784 15.9747 16.876 15.4976 16.876 15C16.876 14.5024 16.6784 14.0253 16.3266 13.6734L6.40078 3.75Z" fill="#0D0D0D" />
-                    </svg>
+                    <i class="fa-solid fa-hammer" style="font-size: 32px; color: #0D0D0D;"></i>
                 </div>
                 <div class="content">
-                    <h3 class="title"><a href="service-details.html">Scalable Solutions</a></h3>
-                    <p class="desc">Flexible solar systems designed to grow with your energy needs and adapt to future expansion.</p>
+                    <h3 class="title"><a href="{{ route('services') }}">Custom Decks & Wood Work</a></h3>
+                    <p class="desc">High-quality deck design and construction, fences, pergolas, and custom outdoor wood features.</p>
                 </div>
             </div>
         </div>
@@ -111,10 +103,10 @@
                 <div class="col-lg-4">
                     <div class="about__content style-2">
                         <div class="section-title">
-                            <h2 class="heading-title-two rts-text-anime">Sustainable Future with Clean Energy</h2>
-                            <p class="desc">Harness the power of the sun to create a cleaner and more efficient energy ecosystem. Our solar technologies are designed to reduce carbon emissions while providing reliable power for everyday needs.</p>
+                            <h2 class="heading-title-two rts-text-anime">Transforming Your Landscape with Precision</h2>
+                            <p class="desc">Bring beauty and functionality to your property with our expert landscaping services. We combine creative design with professional maintenance to create outdoor spaces you'll love for years.</p>
                         </div>
-                        <a href="about.html" class="rts-btn btn-primary">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="{{ route('services') }}" class="rts-btn btn-primary">Our Expertise <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -127,7 +119,7 @@
                                         <path id="circle-2" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
                                     </defs>
                                     <text>
-                                        <textPath class="style-2" xlink:href="#circle-2">SUSTAINABLEFUTURE . CLEAN ENGERGY . SOLAR POWER
+                                        <textPath class="style-2" xlink:href="#circle-2">EXPERTDESIGN . PREMIUMSERVICE . LANDSCAPING
                                         </textPath>
                                     </text>
                                 </svg>
@@ -141,14 +133,14 @@
                 <div class="col-lg-3">
                     <div class="rts__about__items">
                         <div class="item">
-                            <h3 class="number"><span class="odometer" data-count="259">0</span>+</h3>
-                            <p class="desc">Solar Installation 2025</p>
+                            <h3 class="number"><span class="odometer" data-count="500">0</span>+</h3>
+                            <p class="desc">Projects Completed</p>
                         </div>
                         <div class="item">
                             <img class="w-100" src="https://html.themewant.com/greenaro/assets/images/about/2.webp" alt="img">
                         </div>
                         <div class="item">
-                            <h3 class="number"><span class="odometer" data-count="1000">0</span>+</h3>
+                            <h3 class="number"><span class="odometer" data-count="1200">0</span>+</h3>
                             <p class="desc">Happy clients</p>
                         </div>
                     </div>
@@ -163,8 +155,8 @@
 <section class="rts__map__area area-two rts-section-gap bg-green ">
     <div class="container">
         <div class="section-title text-center">
-            <span class="sub-title">Installation Map</span>
-            <h2 class="heading-title-two rts-text-anime">Solar Installations</h2>
+            <span class="sub-title">Our Reach</span>
+            <h2 class="heading-title-two rts-text-anime">Service Locations</h2>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -204,43 +196,43 @@
     <div class="container">
         <div class="rts-section-title-area">
             <div class="section-title">
-                <span class="sub-title">Projects</span>
-                <h2 class="heading-title-two rts-text-anime">Latest Projects</h2>
+                <span class="sub-title">Portfolio</span>
+                <h2 class="heading-title-two rts-text-anime">Featured Projects</h2>
             </div>
-            <a href="project.html" class="rts-btn btn-primary">View More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="{{ route('services') }}" class="rts-btn btn-primary">View All Work <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="project__wrapper__two">
             <div class="row g-30 justify-content-lg-center">
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <div class="project__single__item wow fadeInUp" data-wow-delay=".2s">
                         <div class="thumb">
-                            <a href="project-details.html"><img src="https://html.themewant.com/greenaro/assets/images/project/4.webp" alt="img"></a>
+                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/project/4.webp" alt="img"></a>
                         </div>
                         <div class="content">
-                            <h3 class="title"><a href="project-details.html">Green Villa Rooftop Installation</a></h3>
-                            <p class="desc">Installation 2026</p>
+                            <h3 class="title"><a href="#">Luxury Patio & Hardscape</a></h3>
+                            <p class="desc">Residential Project 2026</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-6">
                     <div class="project__single__item wow fadeInUp" data-wow-delay=".4s">
                         <div class="thumb">
-                            <a href="project-details.html"><img src="https://html.themewant.com/greenaro/assets/images/project/5.webp" alt="img"></a>
+                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/project/5.webp" alt="img"></a>
                         </div>
                         <div class="content">
-                            <h3 class="title"><a href="project-details.html">Sunrise Residential Solar Setup</a></h3>
-                            <p class="desc">Installation 2026</p>
+                            <h3 class="title"><a href="#">Commercial Grounds Upkeep</a></h3>
+                            <p class="desc">Corporate HQ 2026</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <div class="project__single__item wow fadeInUp" data-wow-delay=".6s">
                         <div class="thumb">
-                            <a href="project-details.html"><img src="https://html.themewant.com/greenaro/assets/images/project/6.webp" alt="img"></a>
+                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/project/6.webp" alt="img"></a>
                         </div>
                         <div class="content">
-                            <h3 class="title"><a href="project-details.html">Eco-Friendly Power Solution</a></h3>
-                            <p class="desc">Installation 2026</p>
+                            <h3 class="title"><a href="#">Custom Deck & Pergola</a></h3>
+                            <p class="desc">Backyard Oasis 2026</p>
                         </div>
                     </div>
                 </div>
@@ -255,44 +247,38 @@
     <div class="container-1428">
         <div class="section-title text-center">
             <span class="sub-title">Why Choose Us</span>
-            <h2 class="heading-title-two rts-text-anime">What Makes Us Different</h2>
-            <p class="desc">We combine expertise, innovation, and sustainability to <br> deliver solar solutions you can rely on.</p>
+            <h2 class="heading-title-two rts-text-anime">The Diamond Landscapes Edge</h2>
+            <p class="desc">We combine creative artistry, technical skill, and reliable <br> maintenance to deliver landscapes that exceed expectations.</p>
         </div>
         <div class="choose-items-wrapper-two">
             <div class="row gy-5 gy-lg-0">
                 <div class="col-xl-4 col-lg-6">
                     <div class="choose__item__wrapper">
                         <div class="choose__single__items wow fadeInUp" data-wow-delay=".2s">
+                            <div class="icon">
+                                <i class="fa-solid fa-star" style="font-size: 20px; color: #34A853;"></i>
+                            </div>
                             <div class="content">
-                                <div class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
-                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899ZM11.8591 11.8124L13.9841 2.24989H5.53727L2.83852 13.9374H9.11789L7.42852 24.8599L17.4373 11.8124H11.8591Z" fill="#002524" />
-                                    </svg>
-                                </div>
-                                <h3 class="title">Affordable & Cost-Saving</h3>
-                                <p class="desc">Save up to 40% on electricity bills.</p>
+                                <h3 class="title">Expert Craftsmanship</h3>
+                                <p class="desc">Detail-oriented work from patios to pergolas.</p>
                             </div>
                         </div>
                         <div class="choose__single__items wow fadeInUp" data-wow-delay=".4s">
                             <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                                    <path d="M30 10.3906C30 13.5784 27.4065 16.1719 24.2187 16.1719H5.85938C5.21215 16.1719 4.6875 15.6472 4.6875 15C4.6875 14.3528 5.21215 13.8281 5.85938 13.8281H24.2187C26.1142 13.8281 27.6562 12.2861 27.6562 10.3906C27.6562 8.49516 26.1142 6.95309 24.2187 6.95309C22.3233 6.95309 20.7812 8.49516 20.7812 10.3906C20.7812 11.0378 20.2566 11.5625 19.6093 11.5625C18.9621 11.5625 18.4375 11.0378 18.4375 10.3906C18.4375 7.20281 21.0309 4.60934 24.2187 4.60934C27.4065 4.60939 30 7.20281 30 10.3906ZM1.17188 11.5625H11.1328C14.3206 11.5625 16.9141 8.969 16.9141 5.78121C16.9141 2.59348 14.3206 0 11.1328 0C7.94502 0 5.35154 2.59348 5.35154 5.78127C5.35154 6.4285 5.87619 6.95314 6.52342 6.95314C7.17064 6.95314 7.69529 6.4285 7.69529 5.78127C7.69529 3.88582 9.23736 2.34375 11.1328 2.34375C13.0283 2.34375 14.5703 3.88582 14.5703 5.78127C14.5703 7.67672 13.0283 9.21879 11.1328 9.21879H1.17188C0.524648 9.21879 0 9.74344 0 10.3907C0 11.0379 0.524648 11.5625 1.17188 11.5625ZM19.6094 18.4375H1.17188C0.524648 18.4375 0 18.9622 0 19.6094C0 20.2566 0.524648 20.7813 1.17188 20.7813H19.6094C21.5048 20.7813 23.0469 22.3233 23.0469 24.2188C23.0469 26.1142 21.5048 27.6563 19.6094 27.6563C17.7139 27.6562 16.1719 26.1142 16.1719 24.2187C16.1719 23.5715 15.6472 23.0469 15 23.0469C14.3528 23.0469 13.8281 23.5715 13.8281 24.2187C13.8281 27.4065 16.4216 30 19.6094 30C22.7972 30 25.3907 27.4065 25.3907 24.2187C25.3906 21.0309 22.7972 18.4375 19.6094 18.4375Z" fill="white" />
-                                </svg>
+                                <i class="fa-solid fa-calendar-check" style="font-size: 20px; color: #34A853;"></i>
                             </div>
                             <div class="content">
-                                <h3 class="title">Eco-Friendly Solutions</h3>
-                                <p class="desc style-2">Reduce carbon footprint and protect.</p>
+                                <h3 class="title">Reliable Maintenance</h3>
+                                <p class="desc style-2">Scheduled care for your property year-round.</p>
                             </div>
                         </div>
                         <div class="choose__single__items wow fadeInUp" data-wow-delay=".6s">
                             <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 29 31" fill="none">
-                                    <path d="M0.859863 22.32V22.3297C0.86956 23.9281 1.96425 25.265 3.43677 25.6622C3.77581 28.1228 5.86835 30.0312 8.4258 30.0312H14.4999C15.0327 30.0312 15.4686 29.5953 15.4686 29.0625C15.4686 28.5297 15.0327 28.0938 14.4999 28.0938H8.4258C6.92425 28.0938 5.67458 27.0281 5.37428 25.6234C6.77897 25.1778 7.81549 23.87 7.81549 22.32V16.7691C7.81549 14.8509 6.25581 13.2912 4.3377 13.2912C3.8049 13.2912 3.30113 13.4269 2.84579 13.64C3.33986 7.64345 8.37737 2.90625 14.4999 2.90625C17.6192 2.90625 20.5546 4.12688 22.773 6.33561C24.7493 8.32153 25.9311 10.8887 26.154 13.6497C25.6986 13.4269 25.1949 13.2912 24.6621 13.2912C22.744 13.2912 21.1843 14.8509 21.1843 16.7691V22.32C21.1843 24.2381 22.744 25.7978 24.6621 25.7978C26.5705 25.7978 28.1302 24.2381 28.1399 22.3297C28.1399 22.32 28.1399 22.32 28.1399 22.32V14.6087C28.1399 10.9759 26.7158 7.54654 24.139 4.96C21.5524 2.38309 18.1327 0.96875 14.4999 0.96875C6.98237 0.96875 0.859863 7.08156 0.859863 14.6087V22.32Z" fill="#002524" />
-                                </svg>
+                                <i class="fa-solid fa-headset" style="font-size: 20px; color: #34A853;"></i>
                             </div>
                             <div class="content">
-                                <h3 class="title">24/7 Customer Support</h3>
-                                <p class="desc">Always here when you need us.</p>
+                                <h3 class="title">Dedicated Support</h3>
+                                <p class="desc">Always available for your landscape needs.</p>
                             </div>
                         </div>
                     </div>
@@ -340,8 +326,8 @@
                             </ul>
                         </div>
                         <div class="team_content">
-                            <h3 class="title"><a href="team-details.html">Jenny Wilson</a></h3>
-                            <p class="designation">Founder & CEO</p>
+                            <h3 class="title"><a href="#">Arslan Khan</a></h3>
+                            <p class="designation">Founder & Lead Landscape Architect</p>
                         </div>
                     </div>
                 </div>
@@ -349,7 +335,7 @@
                     <div class="team__items_card wow fadeInUp" data-wow-delay=".4s">
                         <div class="team_thumb_social">
                             <div class="team_thumb">
-                                <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/2.webp" alt="team"></a>
+                                <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/2.webp" alt="team"></a>
                             </div>
                             <ul class="team_social_icon">
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -359,8 +345,8 @@
                             </ul>
                         </div>
                         <div class="team_content">
-                            <h3 class="title"><a href="team-details.html">Savannah Nguyen</a></h3>
-                            <p class="designation">Solar Energy Consultant</p>
+                            <h3 class="title"><a href="#">David Miller</a></h3>
+                            <p class="designation">Hardscape Specialist</p>
                         </div>
                     </div>
                 </div>
@@ -368,7 +354,7 @@
                     <div class="team__items_card wow fadeInUp" data-wow-delay=".6s">
                         <div class="team_thumb_social">
                             <div class="team_thumb">
-                                <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/3.webp" alt="team"></a>
+                                <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/3.webp" alt="team"></a>
                             </div>
                             <ul class="team_social_icon">
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -378,8 +364,8 @@
                             </ul>
                         </div>
                         <div class="team_content">
-                            <h3 class="title"><a href="team-details.html">Leslie Alexander</a></h3>
-                            <p class="designation">Supervisor</p>
+                            <h3 class="title"><a href="#">Alex Johnson</a></h3>
+                            <p class="designation">Irrigation Specialist</p>
                         </div>
                     </div>
                 </div>
@@ -387,7 +373,7 @@
                     <div class="team__items_card wow fadeInUp" data-wow-delay=".8s">
                         <div class="team_thumb_social">
                             <div class="team_thumb">
-                                <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/4.webp" alt="team"></a>
+                                <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/4.webp" alt="team"></a>
                             </div>
                             <ul class="team_social_icon">
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -397,8 +383,8 @@
                             </ul>
                         </div>
                         <div class="team_content">
-                            <h3 class="title"><a href="team-details.html">Wade Warren</a></h3>
-                            <p class="designation">Marketing Manager</p>
+                            <h3 class="title"><a href="#">Wade Warren</a></h3>
+                            <p class="designation">Project Manager</p>
                         </div>
                     </div>
                 </div>
@@ -444,10 +430,29 @@
                                             </ul>
                                             <span class="rating-val">4.8</span>
                                         </div>
-                                        <p class="desc">"There’s a big difference between solar companies, and Windore truly stood out. The team was friendly, responsive, and took care of everything—even paperwork! My bill dropped by 74% in 6 months!"</p>
+                                        <p class="desc">"The transformation of my backyard was incredible. Diamond Landscapes took my rough idea for a patio and deck and turned it into a stunning reality. Their maintenance team is also fantastic!"</p>
                                         <div class="author">
-                                            <h3 class="name">Jude Billingham</h3>
-                                            <span class="role">Happy Homeowner</span>
+                                            <h3 class="name">Sarah Mitchell</h3>
+                                            <span class="role">Residential Client</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-content">
+                                        <div class="star-rating">
+                                            <ul class="stars">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                            </ul>
+                                            <span class="rating-val">4.9</span>
+                                        </div>
+                                        <p class="desc">"Reliable, professional, and creative. Their irrigation system setup saved my lawn during the peak of summer. Highly recommend for any property maintenance needs."</p>
+                                        <div class="author">
+                                            <h3 class="name">Michael Brown</h3>
+                                            <span class="role">Estate Owner</span>
                                         </div>
                                     </div>
                                 </div>
@@ -463,29 +468,10 @@
                                             </ul>
                                             <span class="rating-val">4.8</span>
                                         </div>
-                                        <p class="desc">"There’s a big difference between solar companies, and Windore truly stood out. The team was friendly, responsive, and took care of everything—even paperwork! My bill dropped by 74% in 6 months!"</p>
+                                        <p class="desc">"Excellent craftsmanship on our new fence and pergola. The wood work is solid and looks beautiful. Arslan and his team are true professionals."</p>
                                         <div class="author">
-                                            <h3 class="name">Jude Billingham</h3>
-                                            <span class="role">Happy Homeowner</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testi-content">
-                                        <div class="star-rating">
-                                            <ul class="stars">
-                                                <li><i class="fa-solid fa-star"></i></li>
-                                                <li><i class="fa-solid fa-star"></i></li>
-                                                <li><i class="fa-solid fa-star"></i></li>
-                                                <li><i class="fa-solid fa-star"></i></li>
-                                                <li><i class="fa-solid fa-star"></i></li>
-                                            </ul>
-                                            <span class="rating-val">4.8</span>
-                                        </div>
-                                        <p class="desc">"There’s a big difference between solar companies, and Windore truly stood out. The team was friendly, responsive, and took care of everything—even paperwork! My bill dropped by 74% in 6 months!"</p>
-                                        <div class="author">
-                                            <h3 class="name">Jude Billingham</h3>
-                                            <span class="role">Happy Homeowner</span>
+                                            <h3 class="name">Emma Davis</h3>
+                                            <span class="role">Homeowner</span>
                                         </div>
                                     </div>
                                 </div>
@@ -511,8 +497,8 @@
 <section class="rts__blog__area rts-section-gap ">
     <div class="container-1428">
         <div class="section-title text-center">
-            <span class="sub-title">Blog</span>
-            <h2 class="heading-title-two rts-text-anime">Insights & Updates From the <br> World of Solar</h2>
+            <span class="sub-title">Expert Advice</span>
+            <h2 class="heading-title-two rts-text-anime">Landscaping Insights & Maintenance Tips</h2>
         </div>
         <div class="blog__items__wrapper">
             <div class="row g-30">
@@ -526,9 +512,9 @@
                                 <a href="blog-details.html" class="link-btn">Learn</a>
                                 <p class="read">5-minute read</p>
                             </div>
-                            <h3 class="title"><a href="blog-details.html">Top 10 Solar Energy Myths Debunked</a></h3>
+                            <h3 class="title"><a href="#">How to Maintain a Lush Green Lawn All Year</a></h3>
                             <div class="info">
-                                <h4 class="name">Michael Thompson</h4>
+                                <h4 class="name">Arslan Khan</h4>
                                 <span class="date">October 1, 2023</span>
                             </div>
                         </div>
@@ -544,9 +530,9 @@
                                 <a href="blog-details.html" class="link-btn">Learn</a>
                                 <p class="read">5-minute read</p>
                             </div>
-                            <h3 class="title"><a href="blog-details.html">Solar Reduce Your Electricity Costs</a></h3>
+                            <h3 class="title"><a href="#">The Benefits of Professional Hardscaping</a></h3>
                             <div class="info">
-                                <h4 class="name">Jackson Smith</h4>
+                                <h4 class="name">David Miller</h4>
                                 <span class="date">October 1, 2023</span>
                             </div>
                         </div>
@@ -562,9 +548,9 @@
                                 <a href="blog-details.html" class="link-btn">Learn</a>
                                 <p class="read">5-minute read</p>
                             </div>
-                            <h3 class="title"><a href="blog-details.html">Future of Renewable Energy for Busin...</a></h3>
+                            <h3 class="title"><a href="#">Top Irrigation Tips for a Healthy Garden</a></h3>
                             <div class="info">
-                                <h4 class="name">John Doe</h4>
+                                <h4 class="name">Alex Johnson</h4>
                                 <span class="date">October 1, 2023</span>
                             </div>
                         </div>
