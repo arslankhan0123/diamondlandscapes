@@ -2,6 +2,82 @@
 @section('title', 'Service Details')
 
 @section('content')
+<style>
+    .service__widget .process-work-content .choose__single__item.style-2 {
+        background: #002524 !important;
+        padding: 30px !important;
+        border-radius: 12px !important;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: none !important;
+        text-align: left;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .content .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .icon {
+        background: #ffffff !important;
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 8px !important;
+        margin-bottom: 0 !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .icon svg {
+        width: 20px !important;
+        height: auto !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .number {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 50px !important;
+        color: rgba(255, 255, 255, 0.1) !important;
+        font-weight: 700 !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+        font-family: var(--font-primary) !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .title {
+        margin-bottom: 10px !important;
+        margin-top: 20px !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .title a {
+        color: #ffffff !important;
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        line-height: 1.3 !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 p {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 15px !important;
+        margin-bottom: 25px !important;
+        line-height: 1.5 !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .rts-btn {
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        color: #ffffff !important;
+        padding: 10px 25px !important;
+        font-size: 14px !important;
+        border-radius: 30px !important;
+        transition: all 0.3s ease !important;
+        display: inline-block !important;
+        width: auto !important;
+    }
+    .service__widget .process-work-content .choose__single__item.style-2 .rts-btn:hover {
+        background: #34A853 !important;
+        border-color: #34A853 !important;
+        color: #ffffff !important;
+    }
+</style>
+
 @if(session('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
     <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
@@ -54,49 +130,7 @@
                             <h2 class="title">What We Offer / Key Features</h2>
                             <p class="tt">{!! $service->long_description !!}</p>
                         </div>
-                        <div class="single__item">
-                            <h2 class="title">Process Work</h2>
-                            <p>We provide efficient, scalable, and sustainable solar energy solutions for homes,
-                                businesses, and industries, helping you reduce electricity bills and contribute to a
-                                greener planet.</p>
-                        </div>
-                        <div class="single__item">
-                            <div class="row gy-3">
-                                @foreach($service->highlights as $index => $highlight)
-                                <div class="col-md-6">
-                                    <div class="choose__single__item style-2">
-                                        <div class="content">
-                                            <div class="top">
-                                                <div class="icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
-                                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899Z" fill="#34A853" />
-                                                    </svg>
-                                                </div>
 
-                                                <h2 class="number">
-                                                    {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
-                                                </h2>
-                                            </div>
-
-                                            <h3 class="title">
-                                                <a href="#">
-                                                    {{ $highlight->title }}
-                                                </a>
-                                            </h3>
-
-                                            <p>
-                                                {{ $highlight->description }}
-                                            </p>
-
-                                            <a href="#" class="rts-btn btn-primary">
-                                                Learn More
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -120,6 +154,51 @@
                             </ul>
                         </div>
                         <div class="service__widget">
+                            <div class="service__widget__title">
+                                <h3>Process Work</h3>
+                            </div>
+                            <div class="process-work-content">
+                                <p>We provide efficient, scalable, and sustainable solar energy solutions for homes,
+                                    businesses, and industries, helping you reduce electricity bills and contribute to a
+                                    greener planet.</p>
+                                <div class="row gy-3">
+                                    @foreach($service->highlights as $index => $highlight)
+                                    <div class="col-12">
+                                        <div class="choose__single__item style-2">
+                                            <div class="content">
+                                                <div class="top">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
+                                                            <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899Z" fill="#34A853" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <h2 class="number">
+                                                        {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                                                    </h2>
+                                                </div>
+
+                                                <h3 class="title">
+                                                    <a href="#">
+                                                        {{ $highlight->title }}
+                                                    </a>
+                                                </h3>
+
+                                                <p>
+                                                    {{ $highlight->description }}
+                                                </p>
+
+                                                <a href="#" class="rts-btn btn-primary">
+                                                    Learn More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="service__widget">
                             <div class="service__widget__title border-0">
                                 <h3>Download</h3>
                             </div>
@@ -169,7 +248,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
