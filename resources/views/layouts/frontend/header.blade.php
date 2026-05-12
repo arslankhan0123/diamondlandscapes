@@ -1,4 +1,4 @@
-<header class="rts__main__header header__function">
+<header class="rts__main__header header__function" style="background-color: #001a19;">
     <div class="main__left">
         <div class="logo">
             <a href="index.html">
@@ -14,21 +14,21 @@
 
                     <li>
                         <a href="{{ route('home') }}"
-                            class="{{ request()->routeIs('home') ? 'active-menu' : '' }}">
+                            class="{{ request()->routeIs('home') ? 'active-menu' : '' }}" style="color: white;">
                             Home
                         </a>
                     </li>
 
                     <li>
                         <a href="{{ route('about') }}"
-                            class="{{ request()->routeIs('about') ? 'active-menu' : '' }}">
+                            class="{{ request()->routeIs('about') ? 'active-menu' : '' }}" style="color: white;">
                             About us
                         </a>
                     </li>
 
                     <li class="has-dropdown">
                         <a href="{{ route('services') }}"
-                            class="{{ request()->routeIs('services') ? 'active-menu' : '' }}">
+                            class="{{ request()->routeIs('services') ? 'active-menu' : '' }}" style="color: white;">
                             Services
                         </a>
 
@@ -45,7 +45,7 @@
 
                     <li>
                         <a href="{{ route('contact') }}"
-                            class="{{ request()->routeIs('contact') ? 'active-menu' : '' }}">
+                            class="{{ request()->routeIs('contact') ? 'active-menu' : '' }}" style="color: white;">
                             Contact
                         </a>
                     </li>

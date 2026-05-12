@@ -26,19 +26,19 @@
                 <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="banner-reivew">
-                <div class="banner-play-icon">
+                <!-- <div class="banner-play-icon">
                     <a href="https://www.youtube.com/watch?v=4_DW081WUE8" class="banner-icon popup-video"><i class="fa-solid fa-play"></i></a>
-                </div>
+                </div> -->
 
-                <div class="banner-client-count">
+                <!-- <div class="banner-client-count">
                     <div class="client-thumb"><img src="https://html.themewant.com/greenaro/assets/images/banner/client-2.webp" width="148" alt="client"></div>
                     <div class="client-count">
                         <h2 class="count-title"><span class="odometer" data-count="25">0</span>k+</h2>
                         <p class="desc">Global Customer</p>
                     </div>
-                </div>
+                </div> -->
 
-                <a href="about.html" class="banner-arrow"><img src="https://html.themewant.com/greenaro/assets/images/icon/arrow-right-lg.svg" alt=""></a>
+                <!-- <a href="about.html" class="banner-arrow"><img src="https://html.themewant.com/greenaro/assets/images/icon/arrow-right-lg.svg" alt=""></a> -->
             </div>
         </div>
     </div>
@@ -327,7 +327,7 @@
                         </div>
                         <div class="team_content">
                             <h3 class="title"><a href="#">Arslan Khan</a></h3>
-                            <p class="designation">Founder & Lead Landscape Architect</p>
+                            <p class="designation">Founder & Lead Landscape</p>
                         </div>
                     </div>
                 </div>
@@ -395,7 +395,7 @@
 <!-- rts team area end -->
 
 <!-- rts testimonial area two -->
-<section class="rts__testimonial__area-two rts-section-gap ">
+<!-- <section class="rts__testimonial__area-two rts-section-gap ">
     <div class="container-1428">
         <div class="section-title-area">
             <div class="section-title">
@@ -490,15 +490,15 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts testimonial area end -->
 
 <!-- rts blog area tow -->
-<section class="rts__blog__area rts-section-gap ">
+<section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
     <div class="container-1428">
         <div class="section-title text-center">
-            <span class="sub-title">Expert Advice</span>
-            <h2 class="heading-title-two rts-text-anime">Landscaping Insights & Maintenance Tips</h2>
+            <span class="sub-title" style="color: white;">Expert Advice</span>
+            <h2 class="heading-title-two rts-text-anime" style="color: white;">Landscaping Insights & Maintenance Tips</h2>
         </div>
         <div class="blog__items__wrapper">
             <div class="row g-30">
@@ -510,12 +510,12 @@
                         <div class="content">
                             <div class="top">
                                 <a href="blog-details.html" class="link-btn">Learn</a>
-                                <p class="read">5-minute read</p>
+                                <p class="read" style="color: white;">5-minute read</p>
                             </div>
-                            <h3 class="title"><a href="#">How to Maintain a Lush Green Lawn All Year</a></h3>
+                            <h3 class="title" style="color: white;"><a href="#">How to Maintain a Lush Green Lawn All Year</a></h3>
                             <div class="info">
-                                <h4 class="name">Arslan Khan</h4>
-                                <span class="date">October 1, 2023</span>
+                                <h4 class="name" style="color: white;">Arslan Khan</h4>
+                                <span class="date" style="color: white;">October 1, 2023</span>
                             </div>
                         </div>
                     </div>
@@ -528,12 +528,12 @@
                         <div class="content">
                             <div class="top">
                                 <a href="blog-details.html" class="link-btn">Learn</a>
-                                <p class="read">5-minute read</p>
+                                <p class="read" style="color: white;">5-minute read</p>
                             </div>
-                            <h3 class="title"><a href="#">The Benefits of Professional Hardscaping</a></h3>
+                            <h3 class="title" style="color: white;"><a href="#">The Benefits of Professional Hardscaping</a></h3>
                             <div class="info">
-                                <h4 class="name">David Miller</h4>
-                                <span class="date">October 1, 2023</span>
+                                <h4 class="name" style="color: white;">David Miller</h4>
+                                <span class="date" style="color: white;">October 1, 2023</span>
                             </div>
                         </div>
                     </div>
@@ -546,12 +546,12 @@
                         <div class="content">
                             <div class="top">
                                 <a href="blog-details.html" class="link-btn">Learn</a>
-                                <p class="read">5-minute read</p>
+                                <p class="read" style="color: white;">5-minute read</p>
                             </div>
-                            <h3 class="title"><a href="#">Top Irrigation Tips for a Healthy Garden</a></h3>
+                            <h3 class="title" style="color: white;"><a href="#">Top Irrigation Tips for a Healthy Garden</a></h3>
                             <div class="info">
-                                <h4 class="name">Alex Johnson</h4>
-                                <span class="date">October 1, 2023</span>
+                                <h4 class="name" style="color: white;">Alex Johnson</h4>
+                                <span class="date" style="color: white;">October 1, 2023</span>
                             </div>
                         </div>
                     </div>
