@@ -2,6 +2,89 @@
 @section('title', 'Contact Us')
 
 @section('content')
+<style>
+    /* FAQ Section - Premium Professional Redesign */
+    .rts__faq__area {
+        background-color: #ffffff;
+        padding: 40px 0;
+    }
+    .faq__accordion__wrapper .accordion-item {
+        border: 1px solid rgba(0, 37, 36, 0.08) !important;
+        margin-bottom: 8px;
+        border-radius: 6px !important;
+        background: #ffffff !important;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        overflow: hidden;
+    }
+    .faq__accordion__wrapper .accordion-item:hover {
+        border-color: #34A853 !important;
+        box-shadow: 0 4px 12px rgba(0, 37, 36, 0.03);
+    }
+    .faq__accordion__wrapper .accordion-button {
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        color: #002524 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    .faq__accordion__wrapper .accordion-button:not(.collapsed) {
+        color: #34A853 !important;
+        padding-bottom: 5px !important;
+    }
+    .faq__accordion__wrapper .accordion-button .text {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0 !important;
+    }
+    .faq__accordion__wrapper .accordion-button .number {
+        font-size: 12px !important;
+        color: #666 !important;
+        margin-right: 12px !important;
+        font-weight: 700 !important;
+        width: 28px !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 4px !important;
+        background: #f4f6f4 !important;
+        transition: all 0.3s ease !important;
+    }
+    .faq__accordion__wrapper .accordion-button:not(.collapsed) .number {
+        background: #34A853 !important;
+        color: #ffffff !important;
+    }
+    .faq__accordion__wrapper .accordion-button .title {
+        color: inherit !important;
+        font-size: inherit !important;
+        line-height: 1.4 !important;
+    }
+    .faq__accordion__wrapper .accordion-button .icon {
+        font-size: 12px !important;
+        color: #cbd5e0 !important;
+        transition: transform 0.4s ease !important;
+        margin-left: auto !important;
+    }
+    .faq__accordion__wrapper .accordion-button:not(.collapsed) .icon {
+        color: #34A853 !important;
+        transform: rotate(180deg) !important;
+    }
+    .faq__accordion__wrapper .accordion-button::after {
+        display: none !important;
+    }
+    .faq__accordion__wrapper .accordion-body {
+        padding: 0 15px 12px 55px !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        color: #555555 !important;
+        background: transparent !important;
+    }
+</style>
 <!-- rts breadcrumb area start -->
 <section class="rts__breadcrumb__area bg-light ">
     <div class="container">
@@ -13,7 +96,7 @@
                         <li><i class="fa-solid fa-chevron-right"></i></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                    <h2 class="title rts-text-anime">Contact Us</h2>
+                    <h2 class="title rts-text-anime">Contact Diamond Landscapes</h2>
                 </div>
             </div>
         </div>
@@ -35,8 +118,8 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <span class="title">Email</span>
-                            <a href="mailto:greenarooffical@gmail.com">greenarooffical@gmail.com</a>
+                            <span class="title">Email Us</span>
+                            <a href="mailto:admin@diamondlandscapes">admin@diamondlandscapes</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +132,7 @@
                         </div>
                         <div class="content">
                             <span class="title">Call Us</span>
-                            <a href="tel:+880123456789">+880123456789</a>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
                         </div>
                     </div>
                 </div>
@@ -66,8 +149,8 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <span class="title">Location</span>
-                            <a href="#">125 W 25th St, 11th Floor</a>
+                            <span class="title">Our Location</span>
+                            <a href="#">Your Office Address, City, State</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +244,7 @@
         </div>
         <div class="rts__faq__wrapper mt-50">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="faq__accordion__wrapper">
                         <div class="accordion" id="rts-faq-accordion">
                             <div class="accordion-item">
@@ -169,17 +252,14 @@
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <span class="text">
                                             <span class="number">01.</span>
-                                            <span class="title">How much electricity can a modern wind turbine
-                                                actually <br> produce in a
-                                                year?</span>
+                                            <span class="title">How long does a typical landscaping project take?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                        The timeline depends on the scope. Small garden updates might take a few days, while complex hardscape projects can take 2-4 weeks.
                                     </div>
                                 </div>
                             </div>
@@ -188,18 +268,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">02.</span>
-                                            <span class="title">What is the average operational lifespan of a <br>
-                                                wind turbine
-                                                system?
-                                            </span>
+                                            <span class="title">Do you provide ongoing maintenance services?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                        Yes, we offer flexible maintenance plans for both residential and commercial properties, covering everything from mowing to pruning.
                                     </div>
                                 </div>
                             </div>
@@ -208,17 +284,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <span class="text">
                                             <span class="number">03.</span>
-                                            <span class="title">Can wind turbines generate power in regions with low
-                                                <br> or
-                                                inconsistent wind speeds?</span>
+                                            <span class="title">Can you help with irrigation system design?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                        Absolutely. We specialize in designing and installing efficient irrigation systems tailored to the specific needs of your landscape.
                                     </div>
                                 </div>
                             </div>
@@ -227,17 +300,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">04.</span>
-                                            <span class="title">What type of maintenance is required to keep wind
-                                                <br> turbines
-                                                running efficiently?</span>
+                                            <span class="title">What materials do you use for hardscaping?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                        We use premium materials including natural stone, high-quality pavers, and durable timber to ensure longevity and aesthetic appeal.
                                     </div>
                                 </div>
                             </div>
@@ -246,17 +316,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">05.</span>
-                                            <span class="title">How expensive is it to set up a wind energy project
-                                                <br> for homes
-                                                or businesses?</span>
+                                            <span class="title">Are your landscaping services affordable?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                        We provide competitive pricing and can tailor our designs to fit various budgets while maintaining high standards of quality.
                                     </div>
                                 </div>
                             </div>
