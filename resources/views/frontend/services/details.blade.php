@@ -2,205 +2,176 @@
 @section('title', 'Service Details')
 
 @section('content')
-    @if(session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+@if(session('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <i class="fas fa-exclamation-circle me-2"></i> {{ session('error') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+<!-- rts breadcrumb area start -->
+<section class="rts__breadcrumb__area ">
+    <div class="container-1428">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="rts__breadcrumb__content inner__one">
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa-solid fa-chevron-right"></i></li>
+                        <li><a href="#">Services Details</a></li>
+                    </ul>
+                    <h2 class="title rts-text-anime"> Solar Power Solutions</h2>
+                    <p class="desc">We provide efficient, scalable, and sustainable solar energy solutions for
+                        homes, businesses, and industries, helping you reduce electricity bills and contribute to a
+                        greener planet.</p>
+                </div>
+            </div>
         </div>
-    @endif
+    </div>
+</section>
+<!-- rts breadcrumb area end -->
 
-    @if(session('error'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <i class="fas fa-exclamation-circle me-2"></i> {{ session('error') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector(".header-area");
-            if (header) {
-                header.classList.remove("header-2");
-                header.classList.add("header-1");
-            }
-
-            const logo = document.querySelector(".logo img");
-            if (logo) {
-                logo.src = "{{asset('logo.png')}}";
-                // logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
-            }
-        });
-    </script>
-    <main id="primary" class="site-main">
-        <div class="space-for-header"></div>
-        <!-- start: Breadcrumb Section -->
-
-        <!-- https://themejunction.net/html/bexon/demo/assets/images/bg/pheader-bg.webp -->
-        <section class="tj-page-header section-gap-x" data-bg-image="{{asset($service->feature_image)}}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tj-page-header-content text-center">
-                            <h1 class="tj-page-title">Service Details</h1>
-                            <div class="tj-page-link">
-                                <span><i class="tji-home"></i></span>
-                                <span>
-                                    <a href="{{ route('home') }}">Home</a>
-                                </span>
-                                <span><i class="tji-arrow-right"></i></span>
-                                <span>
-                                    <span>Service Details</span>
-                                </span>
+<!-- rts service details area start -->
+<div class="rts__service__details__area rts-section-gapBottom2 pt-60 ">
+    <div class="container-1428">
+        <div class="rts__service__details__wrapper">
+            <div class="rts__service__details_image">
+                <img src="https://html.themewant.com/greenaro/assets/images/service/1.webp" alt="service-image">
+            </div>
+            <div class="row gy-5">
+                <div class="col-lg-8">
+                    <div class="rts__service__details__content top-sticky">
+                        <div class="single__item">
+                            <h2 class="title">What We Offer / Key Features</h2>
+                            <p class="tt">We help businesses navigate challenges, seize new opportunities, and
+                                achieve
+                                sustainable growth through data-driven strategies and expert business advice.</p>
+                            <ul class="list">
+                                <li><i class="fa-solid fa-plus"></i> Residential Solar Panels</li>
+                                <li><i class="fa-solid fa-plus"></i> Solar Energy Storage</li>
+                                <li><i class="fa-solid fa-plus"></i> Commercial Solar Systems</li>
+                                <li><i class="fa-solid fa-plus"></i> Hybrid Solar-Wind Solutions</li>
+                                <li><i class="fa-solid fa-plus"></i> Solar Farms / Utility-Scale Projects</li>
+                            </ul>
+                        </div>
+                        <div class="single__item">
+                            <h2 class="title">Process Work</h2>
+                            <p>We provide efficient, scalable, and sustainable solar energy solutions for homes,
+                                businesses, and industries, helping you reduce electricity bills and contribute to a
+                                greener planet.</p>
+                        </div>
+                        <div class="single__item">
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <div class="choose__single__item">
+                                        <div class="content">
+                                            <div class="top">
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
+                                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899ZM11.8591 11.8124L13.9841 2.24989H5.53727L2.83852 13.9374H9.11789L7.42852 24.8599L17.4373 11.8124H11.8591Z" fill="#34A853" />
+                                                    </svg>
+                                                </div>
+                                                <h2 class="number">01</h2>
+                                            </div>
+                                            <h3 class="title"><a href="#">Expertise You Can Trust</a></h3>
+                                            <p>With years of experience in renewable energy
+                                                projects, our
+                                                team delivers reliable</p>
+                                            <a href="#" class="rts-btn btn-primary">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="choose__single__item style-2">
+                                        <div class="content">
+                                            <div class="top">
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
+                                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899ZM11.8591 11.8124L13.9841 2.24989H5.53727L2.83852 13.9374H9.11789L7.42852 24.8599L17.4373 11.8124H11.8591Z" fill="#34A853" />
+                                                    </svg>
+                                                </div>
+                                                <h2 class="number">02</h2>
+                                            </div>
+                                            <h3 class="title"><a href="#">Cutting-edge Technology</a></h3>
+                                            <p>We use the latest innovations in solar and wind energy to ensure
+                                                maximum efficiency</p>
+                                            <a href="#" class="rts-btn btn-primary">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- https://themejunction.net/html/bexon/demo/assets/images/shape/pheader-overlay.webp -->
-            <div class="page-header-overlay" data-bg-image="{{asset($service->feature_image)}}"></div>
-        </section>
-        <!-- end: Breadcrumb Section -->
-
-        <!-- start: Blog Section -->
-        <section class="tj-blog-section section-gap slidebar-stickiy-container">
-            <div class="container">
-                <div class="row row-gap-5">
-                    <div class="col-lg-8">
-                        <div class="post-details-wrapper">
-                            <div class="blog-images wow fadeInUp" data-wow-delay=".1s">
-                                <img src="{{asset($service->feature_image)}}" alt="Images">
+                <div class="col-lg-4">
+                    <div class="rts__service__details__sidebar">
+                        <div class="service__widget">
+                            <div class="service__widget__title">
+                                <h3>All Services</h3>
                             </div>
-                            <h2 class="title title-anim">{{ $service->name }}</h2>
-                            <div class="blog-text">
-                                <p class="wow fadeInUp" data-wow-delay=".3s">{!! $service->long_description !!}</p>
-                                <!-- <ul class="wow fadeInUp" data-wow-delay=".3s">
-                                    <li><span><i class="tji-check"></i></span>Personalization at Scale</li>
-                                    <li><span><i class="tji-check"></i></span>Improved Customer Retention</li>
-                                    <li><span><i class="tji-check"></i></span>Data-Driven Insights</li>
-                                    <li><span><i class="tji-check"></i></span>Omni-channel Integration</li>
-                                    <li><span><i class="tji-check"></i></span>Customer Retention</li>
-                                    <li><span><i class="tji-check"></i></span>Support Optimization</li>
-                                    <li><span><i class="tji-check"></i></span>Proactive Engagement</li>
-                                </ul> -->
-                                @if($service->galleries->count() > 0)
-                                    <div class="images-wrap">
-                                        <div class="row">
-                                            @foreach($service->galleries as $gallery)
-                                                <div class="col-sm-6">
-                                                    <div class="image-box wow fadeInUp" data-wow-delay=".{{ $loop->index + 3 }}s">
-                                                        <img src="{{asset($gallery->image)}}" alt="Gallery Image"
-                                                            style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;">
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                @endif
-                                <h3 class="wow fadeInUp" data-wow-delay=".3s">Our Range of Customer Services</h3>
-                                <p class="wow fadeInUp" data-wow-delay=".3s">At Bexon, we don't just focus on solving
-                                    customer
-                                    problems—we focus on creating experiences that
-                                    delight and build lasting relationships. Whether it's through improving customer service
-                                    operations,
-                                    leveraging technology, or designing more engaging digital experiences, our team is here
-                                    to help
-                                    you
-                                    exceed your customers' expectations every time. We help you understand your customers
-                                    deeply,
-                                    optimize
-                                    their experience.</p>                                @if($service->highlights->count() > 0)
-                                <div class="details-content-box">
-                                    @foreach($service->highlights as $highlight)
-                                    @php $delays = ['.2s', '.4s', '.6s']; @endphp
-                                    <div class="service-details-item wow fadeInUp" data-wow-delay="{{ $delays[$loop->index] ?? '.2s' }}">
-                                        <span class="number">{{ sprintf('%02d', $loop->iteration) }}.</span>
-                                        <h6 class="title">{{ $highlight->title }}</h6>
-                                        <div class="desc">
-                                            <p>{{ $highlight->description }}</p>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                                @endif
-                                @if($service->faqs->count() > 0)
-                                    <h3 class="wow fadeInUp" data-wow-delay=".3s">Frequently asked questions</h3>
-                                    <div class="accordion tj-faq style-2" id="faqOne">
-                                        @foreach($service->faqs as $faq)
-                                            <div class="accordion-item {{ $loop->first ? 'active' : '' }} wow fadeInUp"
-                                                data-wow-delay=".3s">
-                                                <button class="faq-title {{ $loop->first ? '' : 'collapsed' }}" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#faq-{{ $faq->id }}"
-                                                    aria-expanded="{{ $loop->first ? 'true' : 'false' }}">
-                                                    {{ $faq->question }}
-                                                </button>
-                                                <div id="faq-{{ $faq->id }}" class="collapse {{ $loop->first ? 'show' : '' }}"
-                                                    data-bs-parent="#faqOne">
-                                                    <div class="accordion-body faq-text">
-                                                        <p>{{ $faq->answer }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                @endif
-
-                            </div>
-                            <div class="tj-post__navigation mb-0 wow fadeInUp" data-wow-delay=".3s">
-                                <!-- previous post -->
-                                <div class="tj-nav__post previous">
-                                    <div class="tj-nav-post__nav prev_post">
-                                        @if($prevService)
-                                            <a href="{{ route('services.details', ['id' => $prevService->id]) }}">
-                                                <span><i class="tji-arrow-left"></i></span>{{ $prevService->name }}
-                                            </a>
-                                        @else
-                                            <span class="text-muted"><i class="tji-arrow-left"></i> No Previous</span>
-                                        @endif
-                                    </div>
-                                </div>
-                                <div class="tj-nav-post__grid">
-                                    <a href="{{ route('services') }}"><i class="tji-window"></i></a>
-                                </div>
-                                <!-- next post -->
-                                <div class="tj-nav__post next">
-                                    <div class="tj-nav-post__nav next_post">
-                                        @if($nextService)
-                                            <a href="{{ route('services.details', ['id' => $nextService->id]) }}">
-                                                {{ $nextService->name }}<span><i class="tji-arrow-right"></i></span>
-                                            </a>
-                                        @else
-                                            <span class="text-muted">No Next <i class="tji-arrow-right"></i></span>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
+                            <ul class="service__widget__categories">
+                                <li><a href="#"><span>01.</span>Landscape Design</a></li>
+                                <li><a href="#"><span>02.</span>Irrigation System</a></li>
+                                <li><a href="#"><span>03.</span>Garden Supplies</a></li>
+                                <li><a href="#"><span>04.</span>Garden Renovation</a></li>
+                                <li><a href="#"><span>05.</span>Seasonal Plantings</a></li>
+                                <li><a href="#"><span>06.</span>Out Door Lighting</a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="tj-main-sidebar slidebar-stickiy">
-                            <div class="tj-sidebar-widget service-categories wow fadeInUp" data-wow-delay=".1s">
-                                <h4 class="widget-title">More services</h4>
-                                <ul>
-                                    @foreach ($services as $item)
-                                        <li><a class="{{ $item->id == $service->id ? 'active' : '' }}"
-                                                href="{{ route('services.details', ['id' => $item->id]) }}">{{ $item->name }}<span
-                                                    class="icon"><i class="tji-arrow-right"></i></span></a></li>
-                                    @endforeach
-                                </ul>
+                        <div class="service__widget">
+                            <div class="service__widget__title border-0">
+                                <h3>Download</h3>
                             </div>
-                            <div class="tj-sidebar-widget widget-feature-item wow fadeInUp" data-wow-delay=".3s">
-                                <div class="feature-box">
-                                    <div class="feature-content">
-                                        <h2 class="title">Modern</h2>
-                                        <span>Home Makeover</span>
-                                        <a class="read-more feature-contact" href="tel:+14038300054">
-                                            <i class="tji-phone-3"></i>
-                                            <span>+1 (403) 830-0054</span>
+                            <div class="service__widget__download">
+                                <div class="download__item">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.4336 2.57889C17.9553 2.10056 17.127 2.42723 17.127 3.09223V7.16389C17.127 8.86723 18.5736 10.2789 20.3353 10.2789C21.4436 10.2906 22.9836 10.2906 24.302 10.2906C24.967 10.2906 25.317 9.5089 24.8503 9.04223C23.1703 7.35056 20.1603 4.30556 18.4336 2.57889Z" fill="#002524" />
+                                                <path d="M23.916 11.887H20.5443C17.7793 11.887 15.5277 9.63536 15.5277 6.87036V3.4987C15.5277 2.85703 15.0027 2.33203 14.361 2.33203H9.41435C5.82102 2.33203 2.91602 4.66537 2.91602 8.83037V19.167C2.91602 23.332 5.82102 25.6654 9.41435 25.6654H18.5843C22.1777 25.6654 25.0827 23.332 25.0827 19.167V13.0537C25.0827 12.412 24.5577 11.887 23.916 11.887ZM13.416 20.707H8.74935C8.27102 20.707 7.87435 20.3104 7.87435 19.832C7.87435 19.3537 8.27102 18.957 8.74935 18.957H13.416C13.8943 18.957 14.291 19.3537 14.291 19.832C14.291 20.3104 13.8943 20.707 13.416 20.707ZM15.7493 16.0404H8.74935C8.27102 16.0404 7.87435 15.6437 7.87435 15.1654C7.87435 14.687 8.27102 14.2904 8.74935 14.2904H15.7493C16.2277 14.2904 16.6243 14.687 16.6243 15.1654C16.6243 15.6437 16.2277 16.0404 15.7493 16.0404Z" fill="#002524" />
+                                            </svg>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Our Brochures</h4>
+                                            <span>Download</span>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <a href="#" class="down__link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+                                                <path d="M10.2549 0.677734C10.0035 0.677795 9.76238 0.777703 9.58459 0.955492C9.4068 1.13328 9.3069 1.3744 9.30684 1.62583V12.4419L5.68105 8.8161C5.593 8.72806 5.48847 8.65823 5.37343 8.61059C5.25839 8.56295 5.13509 8.53844 5.01058 8.53845C4.75911 8.53847 4.51795 8.63838 4.34015 8.81621C4.16235 8.99404 4.06248 9.23522 4.0625 9.48669C4.06252 9.73815 4.16244 9.97931 4.34027 10.1571L9.58443 15.4006C9.7623 15.5783 10.0035 15.6782 10.2549 15.6782C10.5064 15.6782 10.7476 15.5783 10.9254 15.4006L16.1696 10.1562C16.3474 9.9784 16.4473 9.73724 16.4474 9.48577C16.4474 9.23431 16.3475 8.99313 16.1697 8.8153C15.9919 8.63747 15.7508 8.53756 15.4993 8.53754C15.2478 8.53752 15.0066 8.63739 14.8288 8.81519L11.203 12.4419V1.62583C11.203 1.3744 11.1031 1.13328 10.9253 0.955492C10.7475 0.777703 10.5064 0.677795 10.2549 0.677734Z" fill="#002524" />
+                                                <path d="M0.948097 13.2137C0.696646 13.2137 0.455494 13.3136 0.277691 13.4914C0.0998884 13.6692 0 13.9104 0 14.1618V17.286C0.00114616 18.3209 0.412762 19.3131 1.14454 20.0448C1.87632 20.7766 2.86849 21.1882 3.90338 21.1894H16.6083C17.6432 21.1882 18.6354 20.7766 19.3672 20.0448C20.099 19.3131 20.5106 18.3209 20.5117 17.286V14.1618C20.5117 14.0373 20.4872 13.9141 20.4396 13.799C20.3919 13.684 20.3221 13.5795 20.234 13.4914C20.146 13.4034 20.0415 13.3336 19.9264 13.2859C19.8114 13.2383 19.6881 13.2137 19.5636 13.2137C19.4391 13.2137 19.3158 13.2383 19.2008 13.2859C19.0858 13.3336 18.9813 13.4034 18.8932 13.4914C18.8052 13.5795 18.7353 13.684 18.6877 13.799C18.64 13.9141 18.6155 14.0373 18.6155 14.1618V17.286C18.6149 17.8182 18.4033 18.3283 18.027 18.7046C17.6507 19.0809 17.1405 19.2926 16.6083 19.2932H3.90338C3.37123 19.2926 2.86104 19.0809 2.48475 18.7046C2.10846 18.3283 1.8968 17.8182 1.89619 17.286V14.1618C1.89622 14.0373 1.87172 13.914 1.82409 13.799C1.77645 13.6839 1.70662 13.5794 1.61857 13.4914C1.53053 13.4033 1.426 13.3335 1.31095 13.2859C1.19591 13.2382 1.07261 13.2137 0.948097 13.2137Z" fill="#002524" />
+                                            </svg>
                                         </a>
                                     </div>
-                                    <div class="feature-images">
-                                        <img src="https://themejunction.net/html/bexon/demo/assets/images/service/service-ad.webp"
-                                            alt="">
+                                </div>
+                                <div class="download__item">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.4336 2.57889C17.9553 2.10056 17.127 2.42723 17.127 3.09223V7.16389C17.127 8.86723 18.5736 10.2789 20.3353 10.2789C21.4436 10.2906 22.9836 10.2906 24.302 10.2906C24.967 10.2906 25.317 9.5089 24.8503 9.04223C23.1703 7.35056 20.1603 4.30556 18.4336 2.57889Z" fill="#002524" />
+                                                <path d="M23.916 11.887H20.5443C17.7793 11.887 15.5277 9.63536 15.5277 6.87036V3.4987C15.5277 2.85703 15.0027 2.33203 14.361 2.33203H9.41435C5.82102 2.33203 2.91602 4.66537 2.91602 8.83037V19.167C2.91602 23.332 5.82102 25.6654 9.41435 25.6654H18.5843C22.1777 25.6654 25.0827 23.332 25.0827 19.167V13.0537C25.0827 12.412 24.5577 11.887 23.916 11.887ZM13.416 20.707H8.74935C8.27102 20.707 7.87435 20.3104 7.87435 19.832C7.87435 19.3537 8.27102 18.957 8.74935 18.957H13.416C13.8943 18.957 14.291 19.3537 14.291 19.832C14.291 20.3104 13.8943 20.707 13.416 20.707ZM15.7493 16.0404H8.74935C8.27102 16.0404 7.87435 15.6437 7.87435 15.1654C7.87435 14.687 8.27102 14.2904 8.74935 14.2904H15.7493C16.2277 14.2904 16.6243 14.687 16.6243 15.1654C16.6243 15.6437 16.2277 16.0404 15.7493 16.0404Z" fill="#002524" />
+                                            </svg>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Documentation</h4>
+                                            <span>Download</span>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <a href="#" class="down__link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+                                                <path d="M10.2549 0.677734C10.0035 0.677795 9.76238 0.777703 9.58459 0.955492C9.4068 1.13328 9.3069 1.3744 9.30684 1.62583V12.4419L5.68105 8.8161C5.593 8.72806 5.48847 8.65823 5.37343 8.61059C5.25839 8.56295 5.13509 8.53844 5.01058 8.53845C4.75911 8.53847 4.51795 8.63838 4.34015 8.81621C4.16235 8.99404 4.06248 9.23522 4.0625 9.48669C4.06252 9.73815 4.16244 9.97931 4.34027 10.1571L9.58443 15.4006C9.7623 15.5783 10.0035 15.6782 10.2549 15.6782C10.5064 15.6782 10.7476 15.5783 10.9254 15.4006L16.1696 10.1562C16.3474 9.9784 16.4473 9.73724 16.4474 9.48577C16.4474 9.23431 16.3475 8.99313 16.1697 8.8153C15.9919 8.63747 15.7508 8.53756 15.4993 8.53754C15.2478 8.53752 15.0066 8.63739 14.8288 8.81519L11.203 12.4419V1.62583C11.203 1.3744 11.1031 1.13328 10.9253 0.955492C10.7475 0.777703 10.5064 0.677795 10.2549 0.677734Z" fill="#002524" />
+                                                <path d="M0.948097 13.2137C0.696646 13.2137 0.455494 13.3136 0.277691 13.4914C0.0998884 13.6692 0 13.9104 0 14.1618V17.286C0.00114616 18.3209 0.412762 19.3131 1.14454 20.0448C1.87632 20.7766 2.86849 21.1882 3.90338 21.1894H16.6083C17.6432 21.1882 18.6354 20.7766 19.3672 20.0448C20.099 19.3131 20.5106 18.3209 20.5117 17.286V14.1618C20.5117 14.0373 20.4872 13.9141 20.4396 13.799C20.3919 13.684 20.3221 13.5795 20.234 13.4914C20.146 13.4034 20.0415 13.3336 19.9264 13.2859C19.8114 13.2383 19.6881 13.2137 19.5636 13.2137C19.4391 13.2137 19.3158 13.2383 19.2008 13.2859C19.0858 13.3336 18.9813 13.4034 18.8932 13.4914C18.8052 13.5795 18.7353 13.684 18.6877 13.799C18.64 13.9141 18.6155 14.0373 18.6155 14.1618V17.286C18.6149 17.8182 18.4033 18.3283 18.027 18.7046C17.6507 19.0809 17.1405 19.2926 16.6083 19.2932H3.90338C3.37123 19.2926 2.86104 19.0809 2.48475 18.7046C2.10846 18.3283 1.8968 17.8182 1.89619 17.286V14.1618C1.89622 14.0373 1.87172 13.914 1.82409 13.799C1.77645 13.6839 1.70662 13.5794 1.61857 13.4914C1.53053 13.4033 1.426 13.3335 1.31095 13.2859C1.19591 13.2382 1.07261 13.2137 0.948097 13.2137Z" fill="#002524" />
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -208,32 +179,125 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end: Blog Section -->
+        </div>
+    </div>
+</div>
+<!-- rts service details area end -->
 
-        <!-- start: Cta Section -->
-        <section class="tj-cta-section mb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cta-area">
-                            <div class="cta-content">
-                                <h2 class="title title-anim">Let’s Build Future Together.</h2>
-                                <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                    <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
-                                        <span class="btn-text"><span>Get Started Now</span></span>
-                                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                    </a>
+<!-- rts faq area start -->
+<section class="rts__faq__area rts-section-gap inner-bg ">
+    <div class="container-1428">
+        <div class="section-title text-center position-static">
+            <span class="sub-title"> FAQ</span>
+            <h2 class="heading-title rts-text-anime">Frequently Asked Questions</h2>
+        </div>
+        <div class="rts__faq__wrapper mt-50">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq__accordion__wrapper">
+                        <div class="accordion" id="rts-faq-accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="text">
+                                            <span class="number">01.</span>
+                                            <span class="title">How much electricity can a modern wind turbine
+                                                actually <br> produce in a
+                                                year?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="cta-img">
-                                <img src="https://themejunction.net/html/bexon/demo/assets/images/cta/cta-bg.webp" alt="">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="text">
+                                            <span class="number">02.</span>
+                                            <span class="title">What is the average operational lifespan of a <br>
+                                                wind turbine
+                                                system?
+                                            </span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="text">
+                                            <span class="number">03.</span>
+                                            <span class="title">Can wind turbines generate power in regions with low
+                                                <br> or
+                                                inconsistent wind speeds?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="text">
+                                            <span class="number">04.</span>
+                                            <span class="title">What type of maintenance is required to keep wind
+                                                <br> turbines
+                                                running efficiently?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="text">
+                                            <span class="number">05.</span>
+                                            <span class="title">How expensive is it to set up a wind energy project
+                                                <br> for homes
+                                                or businesses?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end: Cta Section -->
-    </main>
+        </div>
+    </div>
+</section>
+<!-- rts faq area end -->
 @endsection

@@ -37,10 +37,20 @@ class FrontendController extends Controller
         return view('frontend.contact.index', compact('services'));
     }
 
-    public function services()
+    public function services(Request $request)
     {
-        $services = Service::where('status', 'active')->latest()->get();
-        return view('frontend.services.index', compact('services'));
+        $query = Service::where('status', 'active');
+        $selected_category = null;
+
+        if ($request->has('category')) {
+            $selected_category = \App\Models\Category::where('slug', $request->category)->first();
+            if ($selected_category) {
+                $query->where('category_id', $selected_category->id);
+            }
+        }
+
+        $services = $query->latest()->get();
+        return view('frontend.services.index', compact('services', 'selected_category'));
     }
 
     public function servicesDetails($id)

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\Service;
+use App\Models\Category;
 use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
         $views = ['layouts.frontend.header', 'layouts.frontend.footer'];
         View::composer($views, function ($view) {
             $view->with('header_services', Service::where('status', 'active')->get());
+            $view->with('header_categories', Category::where('status', 'active')->get());
         });
     }
 }

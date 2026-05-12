@@ -29,16 +29,17 @@
                     <li class="has-dropdown">
                         <a href="{{ route('services') }}"
                             class="{{ request()->routeIs('services') ? 'active-menu' : '' }}">
-                            Service
+                            Services
                         </a>
 
                         <ul class="sub-menu">
+                            @foreach($header_categories as $category)
                             <li>
-                                <a href="{{ route('services') }}"
-                                    class="{{ request()->routeIs('services') ? 'active-menu' : '' }}">
-                                    Service
+                                <a href="{{ route('services', ['category' => $category->slug]) }}">
+                                    {{ $category->name }}
                                 </a>
                             </li>
+                            @endforeach
                         </ul>
                     </li>
 
