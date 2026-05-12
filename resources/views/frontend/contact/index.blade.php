@@ -104,6 +104,29 @@
 </section>
 <!-- rts breadcrumb area end -->
 
+@if(session('success'))
+<div class="container mt-5">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" style="border-left: 5px solid #34A853;">
+        <i class="fas fa-check-circle me-2"></i> <strong>Success!</strong> {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+@endif
+
+@if($errors->any())
+<div class="container mt-5">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="border-left: 5px solid #dc3545;">
+        <i class="fas fa-exclamation-circle me-2"></i> <strong>Error!</strong> Please fix the following:
+        <ul class="mb-0 mt-2">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+@endif
+
 <!-- rts contact info area start -->
 <div class="rts-contact-info-area py-100 bg-light ">
     <div class="container-1428">
@@ -171,36 +194,42 @@
                             <span class="sub-title">Contact</span>
                             <h2 class="heading-title rts-text-anime">Let's Connect & Start Something Great</h2>
                         </div>
-                        <form action="#" class="contact__form-wrapper">
+                        <form action="{{ route('contact.store') }}" method="POST" class="contact__form-wrapper">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form__input">
                                         <label for="fname">First Name *</label>
-                                        <input type="text" name="fname" id="fname" placeholder="First Name">
+                                        <input type="text" name="fname" id="fname" placeholder="First Name" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form__input">
                                         <label for="lname">Last Name *</label>
-                                        <input type="text" name="lname" id="lname" placeholder="Last Name">
-                                        <input type="hidden" name="name" id="name">
+                                        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-12">
                                     <div class="form__input">
                                         <label for="email">Email *</label>
-                                        <input type="email" name="email" id="email" placeholder="Your Email..">
+                                        <input type="email" name="email" id="email" placeholder="Your Email.." required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form__input">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="text" name="phone" id="phone" placeholder="Your Phone Number..">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form__input">
                                         <label for="message">Message *</label>
-                                        <textarea name="message" id="message" placeholder="Your Message.."></textarea>
+                                        <textarea name="message" id="message" placeholder="Your Message.." required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form__input">
-                                        <input type="checkbox" id="terms">
+                                        <input type="checkbox" id="terms" required>
                                         <label for="terms" class="terms"> I agree with the <a href="#">Terms and
                                                 Conditions</a> </label>
                                     </div>
