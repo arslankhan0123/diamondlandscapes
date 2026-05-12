@@ -17,20 +17,22 @@
 @endif
 
 <!-- rts breadcrumb area start -->
-<section class="rts__breadcrumb__area ">
-    <div class="container-1428">
+<section class="rts__breadcrumb__area">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="rts__breadcrumb__content inner__one">
+                <div class="rts__breadcrumb__content"
+                    data-bg-src="{{ asset($service->feature_image) }}">
                     <ul class="list">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
-                        <li><a href="#">Services Details</a></li>
+                        <li><a href="{{ route('services') }}">Our Services</a></li>
+                        @if($service)
+                        <li><i class="fa-solid fa-chevron-right"></i></li>
+                        <li><a href="#">{{ $service->name }}</a></li>
+                        @endif
                     </ul>
-                    <h2 class="title rts-text-anime"> Solar Power Solutions</h2>
-                    <p class="desc">We provide efficient, scalable, and sustainable solar energy solutions for
-                        homes, businesses, and industries, helping you reduce electricity bills and contribute to a
-                        greener planet.</p>
+                    <h2 class="title rts-text-anime">{{ $service ? $service->name : 'Our Services' }}</h2>
                 </div>
             </div>
         </div>
@@ -42,24 +44,15 @@
 <div class="rts__service__details__area rts-section-gapBottom2 pt-60 ">
     <div class="container-1428">
         <div class="rts__service__details__wrapper">
-            <div class="rts__service__details_image">
+            <!-- <div class="rts__service__details_image">
                 <img src="https://html.themewant.com/greenaro/assets/images/service/1.webp" alt="service-image">
-            </div>
+            </div> -->
             <div class="row gy-5">
                 <div class="col-lg-8">
                     <div class="rts__service__details__content top-sticky">
                         <div class="single__item">
                             <h2 class="title">What We Offer / Key Features</h2>
-                            <p class="tt">We help businesses navigate challenges, seize new opportunities, and
-                                achieve
-                                sustainable growth through data-driven strategies and expert business advice.</p>
-                            <ul class="list">
-                                <li><i class="fa-solid fa-plus"></i> Residential Solar Panels</li>
-                                <li><i class="fa-solid fa-plus"></i> Solar Energy Storage</li>
-                                <li><i class="fa-solid fa-plus"></i> Commercial Solar Systems</li>
-                                <li><i class="fa-solid fa-plus"></i> Hybrid Solar-Wind Solutions</li>
-                                <li><i class="fa-solid fa-plus"></i> Solar Farms / Utility-Scale Projects</li>
-                            </ul>
+                            <p class="tt">{!! $service->long_description !!}</p>
                         </div>
                         <div class="single__item">
                             <h2 class="title">Process Work</h2>
@@ -69,43 +62,39 @@
                         </div>
                         <div class="single__item">
                             <div class="row gy-3">
-                                <div class="col-md-6">
-                                    <div class="choose__single__item">
-                                        <div class="content">
-                                            <div class="top">
-                                                <div class="icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
-                                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899ZM11.8591 11.8124L13.9841 2.24989H5.53727L2.83852 13.9374H9.11789L7.42852 24.8599L17.4373 11.8124H11.8591Z" fill="#34A853" />
-                                                    </svg>
-                                                </div>
-                                                <h2 class="number">01</h2>
-                                            </div>
-                                            <h3 class="title"><a href="#">Expertise You Can Trust</a></h3>
-                                            <p>With years of experience in renewable energy
-                                                projects, our
-                                                team delivers reliable</p>
-                                            <a href="#" class="rts-btn btn-primary">Learn More</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @foreach($service->highlights as $index => $highlight)
                                 <div class="col-md-6">
                                     <div class="choose__single__item style-2">
                                         <div class="content">
                                             <div class="top">
                                                 <div class="icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30" fill="none">
-                                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899ZM11.8591 11.8124L13.9841 2.24989H5.53727L2.83852 13.9374H9.11789L7.42852 24.8599L17.4373 11.8124H11.8591Z" fill="#34A853" />
+                                                        <path d="M5.33539 29.7899C5.11796 29.6981 4.93727 29.5366 4.82183 29.3307C4.7064 29.1248 4.66279 28.8864 4.69789 28.653L6.63164 16.0624H1.49977C1.33707 16.0668 1.17555 16.0337 1.02765 15.9658C0.879755 15.8978 0.749446 15.7968 0.646775 15.6705C0.544105 15.5442 0.471818 15.3961 0.435493 15.2374C0.399168 15.0788 0.399775 14.9139 0.437267 14.7555L3.62477 0.943017C3.68085 0.705303 3.81713 0.494172 4.01065 0.345162C4.20417 0.196153 4.44311 0.118364 4.68727 0.124891H15.3123C15.471 0.124352 15.6278 0.159384 15.7712 0.227415C15.9147 0.295445 16.041 0.394744 16.141 0.518016C16.2424 0.642681 16.3142 0.788726 16.351 0.945159C16.3879 1.10159 16.3887 1.26434 16.3535 1.42114L14.5154 9.68739H19.5623C19.7614 9.68699 19.9566 9.74257 20.1257 9.84777C20.2948 9.95297 20.4309 10.1036 20.5185 10.2824C20.5947 10.454 20.6239 10.6428 20.6034 10.8294C20.5829 11.016 20.5133 11.1939 20.4016 11.3449L6.58914 29.4074C6.49579 29.5458 6.37115 29.6602 6.22531 29.7414C6.07948 29.8227 5.91656 29.8684 5.74977 29.8749C5.60759 29.8722 5.46713 29.8434 5.33539 29.7899V29.7899Z" fill="#34A853" />
                                                     </svg>
                                                 </div>
-                                                <h2 class="number">02</h2>
+
+                                                <h2 class="number">
+                                                    {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                                                </h2>
                                             </div>
-                                            <h3 class="title"><a href="#">Cutting-edge Technology</a></h3>
-                                            <p>We use the latest innovations in solar and wind energy to ensure
-                                                maximum efficiency</p>
-                                            <a href="#" class="rts-btn btn-primary">Learn More</a>
+
+                                            <h3 class="title">
+                                                <a href="#">
+                                                    {{ $highlight->title }}
+                                                </a>
+                                            </h3>
+
+                                            <p>
+                                                {{ $highlight->description }}
+                                            </p>
+
+                                            <a href="#" class="rts-btn btn-primary">
+                                                Learn More
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -117,12 +106,17 @@
                                 <h3>All Services</h3>
                             </div>
                             <ul class="service__widget__categories">
-                                <li><a href="#"><span>01.</span>Landscape Design</a></li>
-                                <li><a href="#"><span>02.</span>Irrigation System</a></li>
-                                <li><a href="#"><span>03.</span>Garden Supplies</a></li>
-                                <li><a href="#"><span>04.</span>Garden Renovation</a></li>
-                                <li><a href="#"><span>05.</span>Seasonal Plantings</a></li>
-                                <li><a href="#"><span>06.</span>Out Door Lighting</a></li>
+                                @foreach($services as $index => $serviceItem)
+                                    <li>
+                                        <a href="{{ route('services.details', $serviceItem->id) }}">
+                                            <span>
+                                                {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}.
+                                            </span>
+
+                                            {{ $serviceItem->name }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="service__widget">
@@ -196,102 +190,44 @@
                 <div class="col-lg-8">
                     <div class="faq__accordion__wrapper">
                         <div class="accordion" id="rts-faq-accordion">
+                            @if($service->faqs->count() > 0)
+                            @foreach($service->faqs as $index => $faq)
                             <div class="accordion-item">
                                 <div class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="accordion-button {{ $index != 0 ? 'collapsed' : '' }}"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapse{{ $faq->id }}"
+                                        aria-expanded="{{ $index == 0 ? 'true' : 'false' }}"
+                                        aria-controls="collapse{{ $faq->id }}">
+
                                         <span class="text">
-                                            <span class="number">01.</span>
-                                            <span class="title">How much electricity can a modern wind turbine
-                                                actually <br> produce in a
-                                                year?</span>
-                                        </span>
-                                        <i class="fa-solid fa-chevron-down icon"></i>
-                                    </button>
-                                </div>
-                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#rts-faq-accordion">
-                                    <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <span class="text">
-                                            <span class="number">02.</span>
-                                            <span class="title">What is the average operational lifespan of a <br>
-                                                wind turbine
-                                                system?
+                                            <span class="number">
+                                                {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}.
+                                            </span>
+
+                                            <span class="title">
+                                                {{ $faq->question }}
                                             </span>
                                         </span>
+
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+
+                                <div id="collapse{{ $faq->id }}"
+                                    class="accordion-collapse collapse {{ $index == 0 ? 'show' : '' }}"
+                                    data-bs-parent="#rts-faq-accordion">
+
                                     <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                        {{ $faq->answer }}
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <span class="text">
-                                            <span class="number">03.</span>
-                                            <span class="title">Can wind turbines generate power in regions with low
-                                                <br> or
-                                                inconsistent wind speeds?</span>
-                                        </span>
-                                        <i class="fa-solid fa-chevron-down icon"></i>
-                                    </button>
-                                </div>
-                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
-                                    <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-                                        <span class="text">
-                                            <span class="number">04.</span>
-                                            <span class="title">What type of maintenance is required to keep wind
-                                                <br> turbines
-                                                running efficiently?</span>
-                                        </span>
-                                        <i class="fa-solid fa-chevron-down icon"></i>
-                                    </button>
-                                </div>
-                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
-                                    <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
-                                        <span class="text">
-                                            <span class="number">05.</span>
-                                            <span class="title">How expensive is it to set up a wind energy project
-                                                <br> for homes
-                                                or businesses?</span>
-                                        </span>
-                                        <i class="fa-solid fa-chevron-down icon"></i>
-                                    </button>
-                                </div>
-                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
-                                    <div class="accordion-body">
-                                        Depending on its size and wind conditions, a single large wind turbine can
-                                        generate 6-12 million kWh annually, which is enough to power thousands.
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @else
+                            <p class="text-center">No FAQs available for this service.</p>
+                            @endif
                         </div>
                     </div>
                 </div>
