@@ -2,310 +2,270 @@
 @section('title', 'Contact Us')
 
 @section('content')
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector(".header-area");
-            if (header) {
-                header.classList.remove("header-2");
-                header.classList.add("header-1");
-            }
-
-            const logo = document.querySelector(".logo img");
-            if (logo) {
-                logo.src = "{{asset('logo.png')}}";
-                // logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
-            }
-        });
-    </script>
-    <main id="primary" class="site-main">
-        <div class="space-for-header"></div>
-        <!-- start: Breadcrumb Section -->
-        <section class="tj-page-header section-gap-x"
-            data-bg-image="{{asset('6.jpg')}}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tj-page-header-content text-center">
-                            <h1 class="tj-page-title">Contact Us</h1>
-                            <div class="tj-page-link">
-                                <span><i class="tji-home"></i></span>
-                                <span>
-                                    <a href="{{ route('home') }}">Home</a>
-                                </span>
-                                <span><i class="tji-arrow-right"></i></span>
-                                <span>
-                                    <span>Contact Us</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+<!-- rts breadcrumb area start -->
+<section class="rts__breadcrumb__area bg-light ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="rts__breadcrumb__content" data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa-solid fa-chevron-right"></i></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <h2 class="title rts-text-anime">Contact Us</h2>
                 </div>
             </div>
-            <div class="page-header-overlay"
-                data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/shape/pheader-overlay.webp"></div>
-        </section>
-        <!-- end: Breadcrumb Section -->
+        </div>
+    </div>
+</section>
+<!-- rts breadcrumb area end -->
 
-        <!-- start: Contact Top Section -->
-        <div class="tj-contact-area section-gap">
-            <div class="container">
-                @if(session('success'))
-                    <div class="alert alert-success alert-dismissible fade show mb-5 p-4 border-0 shadow-sm" role="alert"
-                        style="border-radius: 15px; background-color: #d1e7dd; color: #0f5132;">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle me-3 fa-2x"></i>
-                            <div>
-                                <h5 class="alert-heading mb-1 fw-bold">Success!</h5>
-                                <p class="mb-0">{{ session('success') }}</p>
-                            </div>
+<!-- rts contact info area start -->
+<div class="rts-contact-info-area py-100 bg-light ">
+    <div class="container-1428">
+        <div class="rts-contact-info-wrapper">
+            <div class="row g-30">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-contact-info">
+                        <div class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.8869 10.3281L15.7031 14.5433C14.7236 15.3203 13.3457 15.3203 12.3663 14.5433L7.13867 10.3281" stroke="#002524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7277 24.5C23.2759 24.5098 25.6673 21.5945 25.6673 18.0114V9.99835C25.6673 6.4153 23.2759 3.5 19.7277 3.5H8.27364C4.7254 3.5 2.33398 6.4153 2.33398 9.99835V18.0114C2.33398 21.5945 4.7254 24.5098 8.27364 24.5H19.7277Z" stroke="#002524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
-                @if(session('error'))
-                    <div class="alert alert-danger alert-dismissible fade show mb-5 p-4 border-0 shadow-sm" role="alert"
-                        style="border-radius: 15px;">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-exclamation-circle me-3 fa-2x"></i>
-                            <div>
-                                <h5 class="alert-heading mb-1 fw-bold">Error!</h5>
-                                <p class="mb-0">{{ session('error') }}</p>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="row">
-                    <div class="col-12">
-                        <div class="sec-heading text-center">
-                            <span class="sub-title wow fadeInUp" data-wow-delay=".1s"><i class="tji-box"></i>Contact
-                                info</span>
-                            <h2 class="sec-title title-anim"><span>Reach</span> Out to Us</h2>
+                        <div class="content">
+                            <span class="title">Email</span>
+                            <a href="mailto:greenarooffical@gmail.com">greenarooffical@gmail.com</a>
                         </div>
                     </div>
                 </div>
-                <div class="row row-gap-4">
-                    <div class="col-xl-3 col-lg-6 col-sm-6">
-                        <div class="contact-item style-2 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="contact-icon">
-                                <i class="tji-location-3"></i>
-                            </div>
-                            <h3 class="contact-title">Our Location</h3>
-                            <p>100 Whiteram Close Northeast, T1Y 5X8</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-contact-info">
+                        <div class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.453 14.5524C18.107 19.2051 19.1628 13.8225 22.1259 16.7836C24.9827 19.6395 26.6246 20.2117 23.0051 23.8301C22.5518 24.1945 19.6712 28.5779 9.54805 18.4576C-0.576376 8.33597 3.80453 5.45249 4.16898 4.99924C7.79719 1.37079 8.35952 3.02225 11.2163 5.87819C14.1794 8.84055 8.79912 9.89978 13.453 14.5524Z" stroke="#002524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <span class="title">Call Us</span>
+                            <a href="tel:+880123456789">+880123456789</a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-sm-6">
-                        <div class="contact-item style-2 wow fadeInUp" data-wow-delay=".5s">
-                            <div class="contact-icon">
-                                <i class="tji-envelop"></i>
-                            </div>
-                            <h3 class="contact-title">Email us</h3>
-                            <ul class="contact-list">
-                                <li><a href="mailto:info@truenorthbuild.ca">info@truenorthbuild.ca</a></li>
-                                <!-- <li><a href="mailto:israr@truenorthbuild.ca">israr@truenorthbuild.ca</a></li> -->
-                            </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-contact-info">
+                        <div class="icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <g>
+                                        <path id="Stroke1" fill-rule="evenodd" clip-rule="evenodd" d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z" stroke="#002524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path id="Stroke3" fill-rule="evenodd" clip-rule="evenodd" d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z" stroke="#002524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </g>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-sm-6">
-                        <div class="contact-item style-2 wow fadeInUp" data-wow-delay=".7s">
-                            <div class="contact-icon">
-                                <i class="tji-phone"></i>
-                            </div>
-                            <h3 class="contact-title">Call us</h3>
-                            <ul class="contact-list">
-                                <li><a href="tel:+14038300054"><b>Phone:</b> +1 (403) 830-0054</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-sm-6">
-                        <div class="contact-item style-2 wow fadeInUp" data-wow-delay=".9s">
-                            <div class="contact-icon">
-                                <i class="tji-chat"></i>
-                            </div>
-                            <h3 class="contact-title">Live chat</h3>
-                            <ul class="contact-list">
-                                <li><a href="mailto:admin@truenorthbuild.ca">admin@truenorthbuild.ca</a></li>
-                                <li class="active"><a href="{{ route('contact') }}">Need help?</a></li>
-                            </ul>
+                        <div class="content">
+                            <span class="title">Location</span>
+                            <a href="#">125 W 25th St, 11th Floor</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end: Contact Top Section -->
+    </div>
+</div>
+<!-- rts contact info area end -->
 
-        <!-- start: Contact Section -->
-        <section class="tj-contact-section-2 section-bottom-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="contact-form wow fadeInUp" data-wow-delay=".1s">
-                            <style>
-                                .dots-loader {
-                                    display: none;
-                                    align-items: center;
-                                    justify-content: center;
-                                    gap: 6px;
-                                }
-
-                                .dots-loader div {
-                                    width: 12px;
-                                    height: 12px;
-                                    background-color: #ffffff;
-                                    border-radius: 50%;
-                                    animation: dots-loading 1.4s infinite ease-in-out both;
-                                }
-
-                                .dots-loader div:nth-child(1) {
-                                    animation-delay: -0.32s;
-                                }
-
-                                .dots-loader div:nth-child(2) {
-                                    animation-delay: -0.16s;
-                                }
-
-                                @keyframes dots-loading {
-
-                                    0%,
-                                    80%,
-                                    100% {
-                                        transform: scale(0);
-                                        opacity: 0.3;
-                                    }
-
-                                    40% {
-                                        transform: scale(1.0);
-                                        opacity: 1;
-                                    }
-                                }
-
-                                button:disabled .dots-loader {
-                                    display: flex;
-                                }
-
-                                button:disabled .btn-text,
-                                button:disabled .btn-icon {
-                                    display: none !important;
-                                }
-
-                                .tj-primary-btn:disabled {
-                                    cursor: not-allowed;
-                                    opacity: 0.8;
-                                }
-                            </style>
-                            <h3 class="title">Feel Free to Get in Touch or Visit our Location.</h3>
-                            <form id="contact-form" action="{{ route('contact.store') }}" method="POST">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-input">
-                                            <input type="text" name="conName" placeholder="Full Name*"
-                                                value="{{ old('conName') }}" required>
-                                            @error('conName') <small class="text-danger">{{ $message }}</small> @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-input">
-                                            <input type="email" name="conEmail" placeholder="Email Address*"
-                                                value="{{ old('conEmail') }}" required>
-                                            @error('conEmail') <small class="text-danger">{{ $message }}</small> @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-input">
-                                            <input type="tel" name="conPhone" placeholder="Phone number*"
-                                                value="{{ old('conPhone') }}" required>
-                                            @error('conPhone') <small class="text-danger">{{ $message }}</small> @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-input">
-                                            <div class="tj-nice-select-box">
-                                                <div class="tj-select">
-                                                    <select name="conSubject">
-                                                        <option value="">Choose a service</option>
-                                                        @foreach($services as $service)
-                                                            <option value="{{ $service->name }}" {{ old('conSubject') == $service->name ? 'selected' : '' }}>{{ $service->name }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                    @error('conSubject') <small class="text-danger">{{ $message }}</small>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-input message-input">
-                                            <textarea name="conMessage" id="message" placeholder="Type message*"
-                                                required>{{ old('conMessage') }}</textarea>
-                                            @error('conMessage') <small class="text-danger">{{ $message }}</small> @enderror
-                                        </div>
-                                    </div>
-                                    <div class="submit-btn">
-                                        <button class="tj-primary-btn" type="submit" id="submit-btn">
-                                            <span class="btn-text"><span>Submit Now</span></span>
-                                            <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                            <div class="dots-loader">
-                                                <div></div>
-                                                <div></div>
-                                                <div></div>
-                                            </div>
-                                        </button>
+<!-- rts contact area start -->
+<section class="rts__contact__area rts-section-gapBottom  bg-light ">
+    <div class="container-1428">
+        <div class="rts__contact__wrapper">
+            <div class="row gy-5 align-items-end">
+                <div class="col-lg-6">
+                    <div class="rts__contact__form">
+                        <div class="section-title">
+                            <span class="sub-title">Contact</span>
+                            <h2 class="heading-title rts-text-anime">Let's Connect & Start Something Great</h2>
+                        </div>
+                        <form action="#" class="contact__form-wrapper">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form__input">
+                                        <label for="fname">First Name *</label>
+                                        <input type="text" name="fname" id="fname" placeholder="First Name">
                                     </div>
                                 </div>
-                            </form>
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    const contactForm = document.getElementById('contact-form');
-                                    if (contactForm) {
-                                        contactForm.addEventListener('submit', function() {
-                                            const btn = document.getElementById('submit-btn');
-                                            if (btn) {
-                                                btn.disabled = true;
-                                            }
-                                        });
-                                    }
-                                });
-                            </script>
-                        </div>
+                                <div class="col-md-6">
+                                    <div class="form__input">
+                                        <label for="lname">Last Name *</label>
+                                        <input type="text" name="lname" id="lname" placeholder="Last Name">
+                                        <input type="hidden" name="name" id="name">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form__input">
+                                        <label for="email">Email *</label>
+                                        <input type="email" name="email" id="email" placeholder="Your Email..">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form__input">
+                                        <label for="message">Message *</label>
+                                        <textarea name="message" id="message" placeholder="Your Message.."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form__input">
+                                        <input type="checkbox" id="terms">
+                                        <label for="terms" class="terms"> I agree with the <a href="#">Terms and
+                                                Conditions</a> </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="rts-btn btn-primary">Send Message <i
+                                            class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="form-messages" class="mt-10"></div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="map-area wow fadeInUp" data-wow-delay=".3s">
-                            <iframe width="100%" height="450" style="border:0;" loading="lazy" allowfullscreen
-                                src="https://www.google.com/maps?q=100+Whiteram+Close+Northeast,+T1Y+5X8&output=embed">
-                            </iframe>
+                </div>
+                <div class="col-lg-6">
+                    <div class="rts__contact__info">
+                        <div class="rts__contact__info__social">
+                            <p>Follow us on Socials:</p>
+                            <div class="social__list">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="rts__contact__info__map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29208.72412242517!2d90.42666760000002!3d23.7797909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1759116516178!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end: Contact Section -->
+        </div>
+    </div>
+</section>
+<!-- rts contact area end -->
 
-        <!-- start: Cta Section -->
-        <section class="tj-cta-section mb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cta-area">
-                            <div class="cta-content">
-                                <h2 class="title title-anim">Let’s Build Future Together.</h2>
-                                <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                    <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
-                                        <span class="btn-text"><span>Get Started Now</span></span>
-                                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                    </a>
+<!-- rts faq area start -->
+<section class="rts__faq__area rts-section-gap inner-bg ">
+    <div class="container-1428">
+        <div class="section-title text-center position-static">
+            <span class="sub-title"> FAQ</span>
+            <h2 class="heading-title rts-text-anime">Frequently Asked Questions</h2>
+        </div>
+        <div class="rts__faq__wrapper mt-50">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq__accordion__wrapper">
+                        <div class="accordion" id="rts-faq-accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="text">
+                                            <span class="number">01.</span>
+                                            <span class="title">How much electricity can a modern wind turbine
+                                                actually <br> produce in a
+                                                year?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="cta-img">
-                                <img src="https://themejunction.net/html/bexon/demo/assets/images/cta/cta-bg.webp" alt="">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="text">
+                                            <span class="number">02.</span>
+                                            <span class="title">What is the average operational lifespan of a <br>
+                                                wind turbine
+                                                system?
+                                            </span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="text">
+                                            <span class="number">03.</span>
+                                            <span class="title">Can wind turbines generate power in regions with low
+                                                <br> or
+                                                inconsistent wind speeds?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="text">
+                                            <span class="number">04.</span>
+                                            <span class="title">What type of maintenance is required to keep wind
+                                                <br> turbines
+                                                running efficiently?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="text">
+                                            <span class="number">05.</span>
+                                            <span class="title">How expensive is it to set up a wind energy project
+                                                <br> for homes
+                                                or businesses?</span>
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down icon"></i>
+                                    </button>
+                                </div>
+                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
+                                    <div class="accordion-body">
+                                        Depending on its size and wind conditions, a single large wind turbine can
+                                        generate 6-12 million kWh annually, which is enough to power thousands.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end: Cta Section -->
-    </main>
+        </div>
+    </div>
+</section>
+<!-- rts faq area end -->
 @endsection
