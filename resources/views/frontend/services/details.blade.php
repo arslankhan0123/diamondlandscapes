@@ -88,24 +88,24 @@
 
         /* FAQ Section - Premium Professional Redesign */
         .rts__faq__area {
-            background-color: #fcfdfc;
-            padding: 60px 0;
+            background-color: #ffffff;
+            padding: 40px 0;
         }
         .faq__accordion__wrapper .accordion-item {
             border: 1px solid rgba(0, 37, 36, 0.08) !important;
-            margin-bottom: 12px;
-            border-radius: 8px !important;
+            margin-bottom: 8px;
+            border-radius: 6px !important;
             background: #ffffff !important;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             overflow: hidden;
         }
         .faq__accordion__wrapper .accordion-item:hover {
             border-color: #34A853 !important;
-            box-shadow: 0 8px 20px rgba(0, 37, 36, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 37, 36, 0.03);
         }
         .faq__accordion__wrapper .accordion-button {
-            padding: 15px 20px !important;
-            font-size: 17px !important;
+            padding: 12px 15px !important;
+            font-size: 16px !important;
             font-weight: 600 !important;
             color: #002524 !important;
             background: transparent !important;
@@ -117,7 +117,7 @@
         }
         .faq__accordion__wrapper .accordion-button:not(.collapsed) {
             color: #34A853 !important;
-            padding-bottom: 8px !important;
+            padding-bottom: 5px !important;
         }
         .faq__accordion__wrapper .accordion-button .text {
             display: flex !important;
@@ -125,16 +125,16 @@
             gap: 0 !important;
         }
         .faq__accordion__wrapper .accordion-button .number {
-            font-size: 13px !important;
+            font-size: 12px !important;
             color: #666 !important;
-            margin-right: 15px !important;
+            margin-right: 12px !important;
             font-weight: 700 !important;
-            width: 32px !important;
-            height: 32px !important;
+            width: 28px !important;
+            height: 28px !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            border-radius: 6px !important;
+            border-radius: 4px !important;
             background: #f4f6f4 !important;
             transition: all 0.3s ease !important;
         }
@@ -148,7 +148,7 @@
             line-height: 1.4 !important;
         }
         .faq__accordion__wrapper .accordion-button .icon {
-            font-size: 14px !important;
+            font-size: 12px !important;
             color: #cbd5e0 !important;
             transition: transform 0.4s ease !important;
             margin-left: auto !important;
@@ -161,9 +161,9 @@
             display: none !important;
         }
         .faq__accordion__wrapper .accordion-body {
-            padding: 0 20px 15px 67px !important;
-            font-size: 14.5px !important;
-            line-height: 1.6 !important;
+            padding: 0 15px 12px 55px !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
             color: #555555 !important;
             background: transparent !important;
         }
