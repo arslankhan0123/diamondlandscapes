@@ -15,8 +15,8 @@
             <div class="card-body p-4">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <div>
-                        <h4 class="fw-bold mb-1">Elite Services</h4>
-                        <p class="text-muted mb-0">Total of 1 registered services.</p>
+                        <h4 class="fw-bold mb-1">Our Services</h4>
+                        <p class="text-muted mb-0">Total of {{ $services->count() }} registered services.</p>
                     </div>
                     <a href="{{ route('services.create') }}" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm">
                         <i data-feather="plus" class="me-1"></i> Add Service
