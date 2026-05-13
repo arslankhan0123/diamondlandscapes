@@ -1,8 +1,8 @@
 <header class="rts__main__header header__function" style="background-color: #001a19;">
     <div class="main__left">
         <div class="logo">
-            <a href="index.html">
-                <img src="https://html.themewant.com/greenaro/assets/images/logo/logo.svg" alt="logo">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('logo.png') }}" class="mb-2 mt-2" alt="logo" style="max-height: 70px; width: auto; transition: all 0.3s ease;">
             </a>
         </div>
     </div>

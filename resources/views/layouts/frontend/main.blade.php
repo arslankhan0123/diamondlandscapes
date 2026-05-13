@@ -73,11 +73,11 @@
     <!-- rts footer area start -->
     @include('layouts.frontend.footer')
     <!-- rts footer area end -->
-    <div class="rts__offcanvas">
+    <div class="rts__offcanvas" style="background-color: #001a19;">
         <div class="rts__offcanvas__wrapper">
             <div class="rts__offcanvas__header">
                 <div class="logo">
-                    <a href="index.html"><img src="https://html.themewant.com/greenaro/assets/images/logo/logo.svg" alt=""></a>
+                    <a href="index.html"><img src="{{ asset('logo.png') }}" alt="Logo" style="max-height: 30px; width: auto; transition: all 0.3s ease;"></a>
                 </div>
                 <div class="rts__offcanvas__toggle__close">
                     <i class="fa-solid fa-xmark"></i>

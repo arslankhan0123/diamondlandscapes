@@ -1,14 +1,16 @@
-<footer class="rts__footer__area__two bg-green  rts-section-gapTop2">
+<footer class="rts__footer__area__two rts-section-gapTop2" style="background-color: #001514;">
     <div class="container">
         <div class="footer-contact-info text-center">
-            <span class="subtitle">Empowering your world with solar innovation</span>
-            <h2 class="title">Start your journey with expert solar <br> consulting today</h2>
-            <a href="contact.html" class="rts-btn btn-primary">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+            <span class="subtitle" style="color: #34A853;">Artistry in Every Acre</span>
+            <h2 class="title" style="color: white;">Transform Your Property with <br> Diamond Landscapes</h2>
+            <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Consultation <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="footer-brand-widget">
             <div class="footer-brand">
-                <a href="index.html" class="logo"><img src="https://html.themewant.com/greenaro/assets/images/logo/logo-white.svg" alt="logo"></a>
-                <p class="desc">Empowering your world with solar innovation.</p>
+                <a href="{{ route('home') }}" class="logo">
+                    <img src="{{ asset('logo.png') }}" alt="logo" style="max-height: 80px; width: auto;">
+                </a>
+                <p class="desc" style="color: rgba(255, 255, 255, 0.7);">Premium landscaping and property maintenance solutions tailored for homes and businesses. Bringing precision and artistry to your outdoors.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -36,12 +38,12 @@
                     </ul>
                 </div>
                 <div class="single-widget">
-                    <h3 class="widget-title">Location & Contact:</h3>
+                    <h3 class="widget-title" style="color: white;">Location & Contact:</h3>
                     <ul class="widget-list">
-                        <li><a href="#">Helyx Headquarters</a></li>
-                        <li><a href="#">123 Solar Drive, Clean City, CA 90001</a></li>
-                        <li><a href="tel:+1(800)123-4567">+1 (800) 123-4567</a></li>
-                        <li><a href="mailto:support@greenaro.com">support@greenaro.com</a></li>
+                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Diamond Landscapes HQ</a></li>
+                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Your Office Address, City, State</a></li>
+                        <li><a href="tel:+1(234)567-890" style="color: rgba(255, 255, 255, 0.7);">+1 (234) 567-890</a></li>
+                        <li><a href="mailto:admin@diamondlandscapes" style="color: rgba(255, 255, 255, 0.7);">admin@diamondlandscapes</a></li>
                     </ul>
                 </div>
             </div>
