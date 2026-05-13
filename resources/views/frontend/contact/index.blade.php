@@ -158,9 +158,9 @@
             <div class="col-lg-12">
                 <div class="rts__breadcrumb__content" data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
                     <ul class="list">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                     <h2 class="title rts-text-anime">Contact Diamond Landscapes</h2>
                 </div>

@@ -10,7 +10,7 @@
                 <a href="{{ route('home') }}" class="logo">
                     <img src="{{ asset('logo.png') }}" alt="logo" style="max-height: 80px; width: auto;">
                 </a>
-                <p class="desc" style="color: rgba(255, 255, 255, 0.7);">Premium landscaping and property maintenance solutions tailored for homes and businesses. Bringing precision and artistry to your outdoors.</p>
+                <p class="desc" style="color: rgba(255, 255, 255, 0.7);">Transform your outdoor space with expert landscaping and maintenance solutions. From stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -23,18 +23,18 @@
                 <div class="single-widget">
                     <h3 class="widget-title">Quick Links:</h3>
                     <ul class="widget-list">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Solutions</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About</a></li>
+                        <li><a href="{{ route('services') }}">Services</a></li>
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="single-widget">
                     <h3 class="widget-title">Helpful Resources:</h3>
                     <ul class="widget-list">
                         <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Installation Guide</a></li>
-                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Our Gallery</a></li>
+                        <li><a href="#">Support</a></li>
                     </ul>
                 </div>
                 <div class="single-widget">
@@ -56,7 +56,7 @@
                     <p>
                         <script>
                             document.write(new Date().getFullYear());
-                        </script>©<span>reacthemes</span>. All rights
+                        </script>©<span>diamondlandscapes</span>. All rights
                         reserved.
                     </p>
                 </div>

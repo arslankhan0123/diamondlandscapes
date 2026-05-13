@@ -112,7 +112,7 @@
                 <div class="col-lg-5">
                     <div class="about__img style-1">
                         <img src="https://html.themewant.com/greenaro/assets/images/about/1.webp" alt="about">
-                        <div class="about__circle style-2">
+                        <!-- <div class="about__circle style-2">
                             <div class="rts__circle rts__circle-2">
                                 <svg class="spinner" viewBox="0 0 100 100">
                                     <defs>
@@ -127,7 +127,7 @@
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -152,7 +152,7 @@
 <!-- rts about area end -->
 
 <!-- rts map area two -->
-<section class="rts__map__area area-two rts-section-gap bg-green ">
+<!-- <section class="rts__map__area area-two rts-section-gap bg-green ">
     <div class="container">
         <div class="section-title text-center">
             <span class="sub-title">Our Reach</span>
@@ -188,7 +188,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts map area end -->
 
 <!-- rts project area two -->
@@ -206,7 +206,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <div class="project__single__item wow fadeInUp" data-wow-delay=".2s">
                         <div class="thumb">
-                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/project/4.webp" alt="img"></a>
+                            <a href="#"><img src="{{ asset('frontend/assets/images/1.jpg') }}" style="width: 100%; max-height: 300px; object-fit: cover;" alt="img"></a>
                         </div>
                         <div class="content">
                             <h3 class="title"><a href="#">Luxury Patio & Hardscape</a></h3>
@@ -217,7 +217,7 @@
                 <div class="col-xl-5 col-lg-6 col-md-6">
                     <div class="project__single__item wow fadeInUp" data-wow-delay=".4s">
                         <div class="thumb">
-                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/project/5.webp" alt="img"></a>
+                            <a href="#"><img src="{{ asset('frontend/assets/images/2.jpg') }}" style="width: 100%; max-height: 400px; object-fit: cover;" alt="img"></a>
                         </div>
                         <div class="content">
                             <h3 class="title"><a href="#">Commercial Grounds Upkeep</a></h3>
@@ -228,7 +228,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <div class="project__single__item wow fadeInUp" data-wow-delay=".6s">
                         <div class="thumb">
-                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/project/6.webp" alt="img"></a>
+                            <a href="#"><img src="{{ asset('frontend/assets/images/3.jpg') }}" style="width: 100%; max-height: 300px; object-fit: cover;" alt="img"></a>
                         </div>
                         <div class="content">
                             <h3 class="title"><a href="#">Custom Deck & Pergola</a></h3>
@@ -254,7 +254,7 @@
             <div class="row gy-5 gy-lg-0">
                 <div class="col-xl-4 col-lg-6">
                     <div class="choose__item__wrapper">
-                        <div class="choose__single__items wow fadeInUp" data-wow-delay=".2s">
+                        <!-- <div class="choose__single__items wow fadeInUp" data-wow-delay=".2s">
                             <div class="icon">
                                 <i class="fa-solid fa-star" style="font-size: 20px; color: #34A853;"></i>
                             </div>
@@ -262,7 +262,7 @@
                                 <h3 class="title">Expert Craftsmanship</h3>
                                 <p class="desc">Detail-oriented work from patios to pergolas.</p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="choose__single__items wow fadeInUp" data-wow-delay=".4s">
                             <div class="icon">
                                 <i class="fa-solid fa-calendar-check" style="font-size: 20px; color: #34A853;"></i>
@@ -285,13 +285,13 @@
                 </div>
                 <div class="col-xl-8 col-lg-6">
                     <div class="choose-images wow fadeInUp" data-wow-delay=".2s">
-                        <img src="https://html.themewant.com/greenaro/assets/images/choose/4.webp" width="905" alt="img">
-                        <ul class="round-shape">
+                        <img src="{{ asset('frontend/assets/images/1.jpg') }}" style="width: 100%; max-height: 500px; object-fit: cover;" alt="img">
+                        <!-- <ul class="round-shape">
                             <li class="one">
                                 <i class="fa-light fa-plus" data-bs-toggle="tooltip" data-bs-placement="top"
                                     data-bs-custom-class="tooltipx" title="1 MWh = 1,000 kWh"></i>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
@@ -308,7 +308,7 @@
                 <span class="sub-title">Team Members</span>
                 <h2 class="heading-title-two rts-text-anime">Leadership & Expertise You Can Trust</h2>
             </div>
-            <a href="team.html" class="rts-btn btn-primary">Explore Profiles <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="rts-btn btn-primary">Explore Profiles <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="team__items__wrapper">
             <div class="row g-30">
@@ -316,7 +316,7 @@
                     <div class="team__items_card wow fadeInUp" data-wow-delay=".2s">
                         <div class="team_thumb_social">
                             <div class="team_thumb">
-                                <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/1.webp" alt="team"></a>
+                                <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/1.webp" alt="team"></a>
                             </div>
                             <ul class="team_social_icon">
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -505,11 +505,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                         <div class="thumb">
-                            <a href="blog-details.html"><img src="https://html.themewant.com/greenaro/assets/images/blog/1.webp" alt="blog"></a>
+                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/blog/1.webp" alt="blog"></a>
                         </div>
                         <div class="content">
                             <div class="top">
-                                <a href="blog-details.html" class="link-btn">Learn</a>
+                                <a href="#" class="link-btn">Learn</a>
                                 <p class="read" style="color: white;">5-minute read</p>
                             </div>
                             <h3 class="title" style="color: white;"><a href="#">How to Maintain a Lush Green Lawn All Year</a></h3>
@@ -523,11 +523,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-item wow fadeInUp" data-wow-delay=".4s">
                         <div class="thumb">
-                            <a href="blog-details.html"><img src="https://html.themewant.com/greenaro/assets/images/blog/2.webp" alt="blog"></a>
+                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/blog/2.webp" alt="blog"></a>
                         </div>
                         <div class="content">
                             <div class="top">
-                                <a href="blog-details.html" class="link-btn">Learn</a>
+                                <a href="#" class="link-btn">Learn</a>
                                 <p class="read" style="color: white;">5-minute read</p>
                             </div>
                             <h3 class="title" style="color: white;"><a href="#">The Benefits of Professional Hardscaping</a></h3>
@@ -541,11 +541,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-item wow fadeInUp" data-wow-delay=".6s">
                         <div class="thumb">
-                            <a href="blog-details.html"><img src="https://html.themewant.com/greenaro/assets/images/blog/3.webp" alt="blog"></a>
+                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/blog/3.webp" alt="blog"></a>
                         </div>
                         <div class="content">
                             <div class="top">
-                                <a href="blog-details.html" class="link-btn">Learn</a>
+                                <a href="#" class="link-btn">Learn</a>
                                 <p class="read" style="color: white;">5-minute read</p>
                             </div>
                             <h3 class="title" style="color: white;"><a href="#">Top Irrigation Tips for a Healthy Garden</a></h3>

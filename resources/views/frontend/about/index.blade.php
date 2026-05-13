@@ -105,9 +105,9 @@
             <div class="col-lg-12">
                 <div class="rts__breadcrumb__content" data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
                     <ul class="list">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="{{ route('about') }}">About Us</a></li>
                     </ul>
                     <h2 class="title rts-text-anime">About Diamond Landscapes</h2>
                 </div>
@@ -123,9 +123,9 @@
         <div class="row gy-5">
             <div class="col-lg-6">
                 <div class="about__img">
-                    <img src="https://html.themewant.com/greenaro/assets/images/about/4.webp" alt="about">
+                    <img src="{{ asset('frontend/assets/images/about/1.jpg') }}" style="width: 100%; max-height: 500px;" alt="about">
                     <div class="about__circle">
-                        <div class="rts__circle">
+                        <!-- <div class="rts__circle">
                             <svg class="spinner" viewBox="0 0 100 100">
                                 <defs>
                                     <path id="circle-2" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
@@ -135,7 +135,7 @@
                                     </textPath>
                                 </text>
                             </svg>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -189,14 +189,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about__lists">
+                    <!-- <div class="about__lists">
                         <ul>
                             <li><i class="fa-light fa-check"></i> Creative Landscape Design</li>
                             <li><i class="fa-light fa-check"></i> High-Quality Hardscaping</li>
                             <li><i class="fa-light fa-check"></i> Reliable Maintenance Plans</li>
                             <li><i class="fa-light fa-check"></i> Certified Professionals</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -315,7 +315,7 @@
 <!-- rts service area end -->
 
 <!-- rts team area three -->
-<section class="rts__team__area rts-section-gap ">
+<!-- <section class="rts__team__area rts-section-gap ">
     <div class="container">
         <div class="rts__team__wrapper__three">
             <div class="row gy-5 gy-lg-0 justify-content-between">
@@ -331,7 +331,7 @@
                                 <div class="swiper-slide">
                                     <div class="single__item">
                                         <div class="team__thumb">
-                                            <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/1.webp" alt="team"></a>
+                                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/1.webp" alt="team"></a>
                                         </div>
                                         <div class="team__body">
                                             <h3 class="title"><a href="#">Arslan Khan</a></h3>
@@ -342,7 +342,7 @@
                                 <div class="swiper-slide">
                                     <div class="single__item">
                                         <div class="team__thumb">
-                                            <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/2.webp" alt="team"></a>
+                                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/2.webp" alt="team"></a>
                                         </div>
                                         <div class="team__body">
                                             <h3 class="title"><a href="#">David Miller</a></h3>
@@ -353,7 +353,7 @@
                                 <div class="swiper-slide">
                                     <div class="single__item">
                                         <div class="team__thumb">
-                                            <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/3.webp" alt="team"></a>
+                                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/3.webp" alt="team"></a>
                                         </div>
                                         <div class="team__body">
                                             <h3 class="title"><a href="#">Alex Johnson</a></h3>
@@ -364,7 +364,7 @@
                                 <div class="swiper-slide">
                                     <div class="single__item">
                                         <div class="team__thumb">
-                                            <a href="team-details.html"><img src="https://html.themewant.com/greenaro/assets/images/team/4.webp" alt="team"></a>
+                                            <a href="#"><img src="https://html.themewant.com/greenaro/assets/images/team/4.webp" alt="team"></a>
                                         </div>
                                         <div class="team__body">
                                             <h3 class="title"><a href="#">Sarah Wilson</a></h3>
@@ -385,11 +385,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts team area end -->
 
 <!-- rts map area -->
-<section class="rts__map__area rts-section-gap bg-one ">
+<!-- <section class="rts__map__area rts-section-gap bg-one ">
     <div class="container">
         <div class="section-title text-center">
             <span class="sub-title text-white">Our Presence</span>
@@ -425,7 +425,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts map area end -->
 
 <!-- rts testimonial area -->
