@@ -15,6 +15,10 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/careers/details/{slug}', [FrontendController::class, 'careerDetails'])->name('careers.details');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
+Route::get('/reviews', [FrontendController::class, 'reviews'])->name('reviews');
+Route::get('/request-quote', [FrontendController::class, 'quote'])->name('quote');
+Route::get('/faq', [FrontendController::class, 'faq'])->name('faq');
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::group(['prefix' => '/services'], function () {
     Route::get('/', [FrontendController::class, 'services'])->name('services');

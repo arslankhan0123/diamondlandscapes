@@ -6,12 +6,12 @@
             <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Consultation <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="footer-brand-widget">
-            <div class="footer-brand">
+            <div class="footer-brand" style="max-width: 350px;">
                 <a href="{{ route('home') }}" class="logo">
                     <img src="{{ asset('logo.png') }}" alt="logo" style="max-height: 80px; width: auto;">
                 </a>
-                <p class="desc" style="color: rgba(255, 255, 255, 0.7);">Transform your outdoor space with expert landscaping and maintenance solutions. From stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
-                <div class="footer-social">
+                <p class="desc" style="color: rgba(255, 255, 255, 0.7); margin-top: 20px;">Transform your outdoor space with expert landscaping and maintenance solutions. From stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
+                <div class="footer-social" style="margin-top: 30px;">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -32,9 +32,10 @@
                 <div class="single-widget">
                     <h3 class="widget-title">Helpful Resources:</h3>
                     <ul class="widget-list">
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Our Gallery</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="{{ route('faq') }}">FAQs</a></li>
+                        <li><a href="{{ route('gallery') }}">Our Gallery</a></li>
+                        <li><a href="{{ route('reviews') }}">Reviews</a></li>
+                        <li><a href="{{ route('quote') }}">Request a Quote</a></li>
                     </ul>
                 </div>
                 <div class="single-widget">

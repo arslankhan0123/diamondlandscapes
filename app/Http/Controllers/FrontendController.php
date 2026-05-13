@@ -37,6 +37,27 @@ class FrontendController extends Controller
         return view('frontend.contact.index', compact('services'));
     }
 
+    public function gallery()
+    {
+        return view('frontend.gallery.index');
+    }
+
+    public function reviews()
+    {
+        return view('frontend.reviews.index');
+    }
+
+    public function quote()
+    {
+        $services = Service::where('status', 'active')->latest()->get();
+        return view('frontend.quote.index', compact('services'));
+    }
+
+    public function faq()
+    {
+        return view('frontend.faq.index');
+    }
+
     public function services(Request $request)
     {
         $query = Service::where('status', 'active');
