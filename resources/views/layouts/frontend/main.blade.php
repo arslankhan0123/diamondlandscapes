@@ -50,6 +50,31 @@
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/plugins/swiper.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/style.css">
+
+    <style>
+        /* Focused Dark Theme - Header & Mobile Menu Only */
+        .rts__main__header, .header__top {
+            background-color: #001a19 !important;
+        }
+        .mainmenu nav ul li a, .header__top ul li a, .header__top .ofc p {
+            color: #ffffff !important;
+        }
+        .mainmenu nav ul li a:hover {
+            color: #34A853 !important;
+        }
+
+        /* Mobile Offcanvas Menu */
+        .rts__offcanvas, .rts__offcanvas__wrapper {
+            background: #001a19 !important;
+        }
+        .rts__offcanvas__mobile__menu nav ul li a {
+            color: #ffffff !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+        .rts__offcanvas__toggle__close i {
+            color: #ffffff !important;
+        }
+    </style>
 </head>
 
 <body>

@@ -2,7 +2,7 @@
     <div class="main__left">
         <div class="logo">
             <a href="{{ route('home') }}">
-                <img src="{{ asset('logo.png') }}" class="mb-2 mt-2" alt="logo" style="max-height: 70px; width: auto; transition: all 0.3s ease;">
+                <img src="{{ asset('logo.png') }}" class="mb-2 mt-2" alt="logo" style="max-height: 50px; width: auto; transition: all 0.3s ease;">
             </a>
         </div>
     </div>
