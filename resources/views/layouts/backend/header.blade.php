@@ -134,6 +134,13 @@
                                 <span data-key="t-contacts">Contacts</span>
                             </a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle arrow-none" href="{{route('admin.quotes.index')}}" id="topnav-quotes" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="icon nav-icon" data-feather="file-text"></i>
+                                <span data-key="t-quotes">Quotes</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>

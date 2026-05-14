@@ -37,7 +37,7 @@
         <div class="row mt--50">
             <div class="col-lg-12">
                 <div class="contact-form-inner" style="background: #001514; padding: 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <form action="{{ route('contact.store') }}" method="POST">
+                    <form id="quoteForm" action="{{ route('quote.store') }}" method="POST">
                         @csrf
                         <div class="row g-5">
                             <div class="col-lg-6">
@@ -61,7 +61,7 @@
                             <div class="col-lg-6">
                                 <div class="single-input">
                                     <label for="service_id" style="color: white; margin-bottom: 10px; display: block;">Interested Service*</label>
-                                    <select name="service_id" id="service_id" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;">
+                                    <select name="service_id" id="service_id" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;" required>
                                         <option value="">Select a Service</option>
                                         @foreach($services as $service)
                                             <option value="{{ $service->id }}">{{ $service->name }}</option>
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-12 text-center mt--30">
-                                <button type="submit" class="rts-btn btn-primary" style="width: 100%; max-width: 300px;">Submit Request <i class="fa-solid fa-paper-plane ms-2"></i></button>
+                                <button type="submit" class="rts-btn btn-primary" id="submitBtn" style="width: 100%; max-width: 300px;">Submit Request <i class="fa-solid fa-paper-plane ms-2"></i></button>
                             </div>
                         </div>
                     </form>
@@ -102,4 +102,48 @@
     </div>
 </div>
 <!-- quote form area end -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $('#quoteForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            let form = $(this);
+            let submitBtn = $('#submitBtn');
+            let formData = form.serialize();
+            
+            submitBtn.prop('disabled', true).html('Sending... <i class="fa-solid fa-spinner fa-spin ms-2"></i>');
+            
+            $.ajax({
+                url: form.attr('action'),
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: response.message,
+                        confirmButtonColor: '#34A853'
+                    });
+                    form[0].reset();
+                    submitBtn.prop('disabled', false).html('Submit Request <i class="fa-solid fa-paper-plane ms-2"></i>');
+                },
+                error: function(xhr) {
+                    let errorMessage = 'Something went wrong. Please try again.';
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        errorMessage = xhr.responseJSON.message;
+                    }
+                    
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: errorMessage,
+                        confirmButtonColor: '#d33'
+                    });
+                    submitBtn.prop('disabled', false).html('Submit Request <i class="fa-solid fa-paper-plane ms-2"></i>');
+                }
+            });
+        });
+    });
+</script>
 @endsection

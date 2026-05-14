@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\AdminContactController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
@@ -20,6 +21,7 @@ Route::get('/reviews', [FrontendController::class, 'reviews'])->name('reviews');
 Route::get('/request-quote', [FrontendController::class, 'quote'])->name('quote');
 Route::get('/faq', [FrontendController::class, 'faq'])->name('faq');
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/quote/store', [QuoteController::class, 'store'])->name('quote.store');
 Route::group(['prefix' => '/services'], function () {
     Route::get('/', [FrontendController::class, 'services'])->name('services');
     Route::get('/details/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
@@ -67,6 +69,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/index', [AdminContactController::class, 'index'])->name('contacts.index');
         Route::get('/show/{id}', [AdminContactController::class, 'show'])->name('contacts.show');
         Route::get('/{id}', [AdminContactController::class, 'destroy'])->name('contacts.destroy');
+    });
+
+    Route::group(['prefix' => '/quotes'], function () {
+        Route::get('/index', [QuoteController::class, 'index'])->name('admin.quotes.index');
+        Route::get('/show/{id}', [QuoteController::class, 'show'])->name('admin.quotes.show');
+        Route::delete('/destroy/{id}', [QuoteController::class, 'destroy'])->name('admin.quotes.destroy');
     });
 });
 

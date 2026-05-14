@@ -48,6 +48,8 @@
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/plugins/odometer.css">
     <!-- Swiper css -->
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/plugins/swiper.min.css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/style.css">
 
@@ -135,7 +137,7 @@
     <!-- back to top end -->
 
     <!-- script js -->
-    <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/popper.js"></script>
     <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/bootstrap.min.js"></script>
     <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/gsap.min.js"></script>
@@ -147,6 +149,7 @@
     <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/odometer.js"></script>
     <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/smooth-scroll.js"></script>
     <script defer src="https://html.themewant.com/greenaro/assets/js/plugins/wow.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="https://html.themewant.com/greenaro/assets/js/main.js"></script>
 </body>
 
