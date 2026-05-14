@@ -37,21 +37,54 @@
             color: rgba(255, 255, 255, 0.95) !important;
         }
 
-        /* Carousel Button Hover Effects */
+        /* Carousel Button Styles */
         .service-prev,
         .service-next {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 100;
             transition: all 0.3s ease;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            background: #34A853 !important;
+            border: none !important;
+            color: white !important;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-prev {
+            left: -25px;
+        }
+
+        .service-next {
+            right: -25px;
         }
 
         .service-prev:hover,
         .service-next:hover {
-            background: #34A853 !important;
-            border-color: #34A853 !important;
-            transform: scale(1.1);
+            background: #2d8e47 !important;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .service-slider {
+            overflow: hidden !important;
+            position: relative;
+            padding: 0 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .service-prev, .service-next {
+                width: 35px;
+                height: 35px;
+            }
+            .service-prev { left: 5px; }
+            .service-next { right: 5px; }
         }
     </style>
     @if(session('success'))
@@ -293,7 +326,7 @@
                 <p>We offer a wide range of landscaping and property maintenance services designed to enhance the beauty and
                     value of your property.</p>
             </div>
-            <div class="blog__items__wrapper">
+            <div class="blog__items__wrapper" style="position: relative;">
                 <div class="swiper service-slider">
                     <div class="swiper-wrapper">
                         @foreach ($services as $service)
@@ -345,17 +378,14 @@
                             @endforeach
                         @endif
                     </div>
-                    <!-- Navigation Buttons -->
-                    <div class="test__btn mt-30 text-center" style="position: relative; z-index: 10;">
-                        <button class="rts-btn-prev service-prev"
-                            style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;"><i
-                                class="fa-light fa-chevron-left"></i></button>
-                        <button class="rts-btn-next service-next"
-                            style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; width: 50px; height: 50px; border-radius: 50%;"><i
-                                class="fa-light fa-chevron-right"></i></button>
-                    </div>
-                    <!-- <div class="swiper-pagination-area mt-20 text-center"></div> -->
                 </div>
+                <!-- Navigation Buttons Moved Outside Swiper -->
+                <button class="rts-btn-prev service-prev">
+                    <i class="fa-light fa-chevron-left"></i>
+                </button>
+                <button class="rts-btn-next service-next">
+                    <i class="fa-light fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -365,8 +395,9 @@
             if (typeof Swiper !== 'undefined') {
                 new Swiper(".service-slider", {
                     slidesPerView: 4,
-                    spaceBetween: 30,
+                    spaceBetween: 25,
                     loop: true,
+                    centeredSlides: false,
                     autoplay: {
                         delay: 3000,
                         disableOnInteraction: false,
