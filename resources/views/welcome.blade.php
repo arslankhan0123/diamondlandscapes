@@ -2,6 +2,34 @@
 @section('title', 'Home')
 
 @section('content')
+<style>
+    .rts__banner__area {
+        position: relative;
+        overflow: hidden;
+    }
+    .rts__banner__area::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+        backdrop-filter: blur(4px); /* Professional blur effect */
+        z-index: 1;
+    }
+    .rts__banner__area .container-1520 {
+        position: relative;
+        z-index: 2; /* Ensures text is above the blur/overlay */
+    }
+    .banner-title {
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .banner-content .desc {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        color: rgba(255, 255, 255, 0.95) !important;
+    }
+</style>
 @if(session('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
     <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
@@ -16,11 +44,11 @@
 </div>
 @endif
 <!-- rts banner area two -->
-<section class="rts__banner__area " data-bg-src="https://html.themewant.com/greenaro/assets/images/banner/2.webp">
+<section class="rts__banner__area " data-bg-src="{{ asset('frontend/assets/images/1.jpg') }}" style="background-size: cover; background-position: center;">
     <div class="container-1520">
         <div class="rts-banner-wrapper-two">
             <div class="banner-content">
-                <span class="icon"><img src="https://html.themewant.com/greenaro/assets/images/banner/sun.webp" width="60" alt="sun"></span>
+                <!-- <span class="icon"><img src="https://html.themewant.com/greenaro/assets/images/banner/sun.webp" width="60" alt="sun"></span> -->
                 <h1 class="banner-title rts-text-anime">Premium Landscaping for <br> Homes & Businesses </h1>
                 <p class="desc">Transform your outdoor space with expert landscaping and maintenance solutions. From stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
                 <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Service <i class="fa-solid fa-arrow-right"></i></a>
