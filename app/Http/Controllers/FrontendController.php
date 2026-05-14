@@ -28,7 +28,8 @@ class FrontendController extends Controller
 
     public function about()
     {
-        return view('frontend.about.index');
+        $services = Service::where('status', 'active')->latest()->get();
+        return view('frontend.about.index', compact('services'));
     }
 
     public function contact()

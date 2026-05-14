@@ -3,6 +3,64 @@
 
 @section('content')
     <style>
+        /* Carousel Button Styles */
+        .service-prev,
+        .service-next {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 100;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #34A853 !important;
+            border: none !important;
+            color: white !important;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-prev {
+            left: -25px;
+        }
+
+        .service-next {
+            right: -25px;
+        }
+
+        .service-prev:hover,
+        .service-next:hover {
+            background: #2d8e47 !important;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .service-slider {
+            overflow: hidden !important;
+            position: relative;
+            padding: 0 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .service-prev,
+            .service-next {
+                width: 35px;
+                height: 35px;
+            }
+
+            .service-prev {
+                left: 5px;
+            }
+
+            .service-next {
+                right: 5px;
+            }
+        }
+
         /* FAQ Section - Premium Professional Redesign */
         .rts__faq__area {
             background-color: #ffffff;
@@ -285,73 +343,115 @@
     </div>
     <!-- brand area end -->
 
-    <!-- rts service area -->
-    <section class="rts-service-area rts-section-gap bg-one ">
-        <div class="container">
+    <section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
+        <div class="container-1428">
             <div class="section-title text-center">
-                <span class="sub-title">Our Services</span>
-                <h2 class="heading-title rts-text-anime">Premium Landscaping Solutions</h2>
-                <p class="desc">We provide a comprehensive range of landscaping and maintenance services tailored to the
-                    unique needs of your property — designed to ensure lush, beautiful outdoor environments year-round.</p>
+                <span class="sub-title" style="color: white;">Our Services</span>
+                <h2 class="heading-title-two rts-text-anime" style="color: white;">Comprehensive Outdoor Solutions</h2>
+                <p>We offer a wide range of landscaping and property maintenance services designed to enhance the beauty and
+                    value of your property.</p>
             </div>
-            <div class="rts-service-wrapper">
-                <div class="row g-30">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <div class="icon">
-                                <i class="fa-solid fa-trowel-bricks" style="font-size: 40px; color: #34A853;"></i>
+            <div class="blog__items__wrapper" style="position: relative;">
+                <div class="swiper service-slider">
+                    <div class="swiper-wrapper">
+                        @foreach ($services as $service)
+                            <div class="swiper-slide">
+                                <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="thumb">
+                                        <a href="{{ route('services.details', $service->id) }}"><img
+                                                src="{{ asset($service->feature_image) }}"
+                                                style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
+                                                alt="blog"></a>
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="title" style="color: white;"><a
+                                                href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a>
+                                        </h3>
+                                        <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">
+                                            {{ Str::limit($service->short_description, 60) }}</p>
+                                        <div class="info">
+                                            <span class="date"
+                                                style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Hardscape Services</a></h3>
-                                <p class="desc">Expert design and installation of patios, retaining walls, and pathways that
-                                    stand the test of time.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".4s">
-                            <div class="icon">
-                                <i class="fa-solid fa-seedling" style="font-size: 40px; color: #34A853;"></i>
-                            </div>
-                            <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Property Maintenance</a></h3>
-                                <p class="desc">Comprehensive lawn care, seasonal cleanups, and ongoing maintenance for
-                                    residential and commercial sites.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".6s">
-                            <div class="icon">
-                                <i class="fa-solid fa-droplet" style="font-size: 40px; color: #34A853;"></i>
-                            </div>
-                            <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Irrigation Systems</a></h3>
-                                <p class="desc">Modern irrigation installation and repair services ensuring efficient water
-                                    management for your landscape.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".8s">
-                            <div class="icon">
-                                <i class="fa-solid fa-hammer" style="font-size: 40px; color: #34A853;"></i>
-                            </div>
-                            <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Custom Wood Work</a></h3>
-                                <p class="desc">High-quality craftsmanship for custom decks, fences, pergolas, and unique
-                                    outdoor wood features.</p>
-                            </div>
-                        </div>
+                        @endforeach
+                        @if (count($services) > 0 && count($services) < 8)
+                            @foreach ($services as $service)
+                                <div class="swiper-slide">
+                                    <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
+                                        <div class="thumb">
+                                            <a href="{{ route('services.details', $service->id) }}"><img
+                                                    src="{{ asset($service->feature_image) }}"
+                                                    style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
+                                                    alt="blog"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title" style="color: white;"><a
+                                                    href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a>
+                                            </h3>
+                                            <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">
+                                                {{ Str::limit($service->short_description, 60) }}</p>
+                                            <div class="info">
+                                                <span class="date"
+                                                    style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
+                <!-- Navigation Buttons Moved Outside Swiper -->
+                <button class="rts-btn-prev service-prev">
+                    <i class="fa-light fa-chevron-left"></i>
+                </button>
+                <button class="rts-btn-next service-next">
+                    <i class="fa-light fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
-    <!-- rts service area end -->
+
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof Swiper !== 'undefined') {
+                new Swiper(".service-slider", {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                    loop: true,
+                    centeredSlides: false,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: ".service-next",
+                        prevEl: ".service-prev",
+                    },
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 1
+                        },
+                        576: {
+                            slidesPerView: 2
+                        },
+                        992: {
+                            slidesPerView: 3
+                        },
+                        1200: {
+                            slidesPerView: 4
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 
     <!-- rts team area three -->
-    <section class="rts__team__area rts-section-gap ">
+    <!-- <section class="rts__team__area rts-section-gap ">
         <div class="container">
             <div class="rts__team__wrapper__three">
                 <div class="row gy-5 gy-lg-0 justify-content-between">
@@ -429,7 +529,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- rts team area end -->
 
     <!-- rts map area -->
@@ -473,7 +573,7 @@
     <!-- rts map area end -->
 
     <!-- rts testimonial area -->
-    <section class="rts__testimonial__area rts-section-gap ">
+    <!-- <section class="rts__testimonial__area rts-section-gap ">
         <div class="container">
             <div class="section-title-area">
                 <div class="section-title">
@@ -630,7 +730,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- rts testimonial area end -->
 
     <!-- rts faq area start -->
