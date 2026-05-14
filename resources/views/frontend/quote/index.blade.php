@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="row mt--50">
-            <div class="col-lg-10 offset-lg-1">
+            <div class="col-lg-12">
                 <div class="contact-form-inner" style="background: #001514; padding: 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
                     <form action="{{ route('contact.store') }}" method="POST">
                         @csrf
