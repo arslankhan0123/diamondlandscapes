@@ -7,6 +7,7 @@
         position: relative;
         overflow: hidden;
     }
+
     .rts__banner__area::before {
         content: '';
         position: absolute;
@@ -14,17 +15,23 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
-        backdrop-filter: blur(4px); /* Professional blur effect */
+        background: rgba(0, 0, 0, 0.5);
+        /* Darker overlay for better contrast */
+        backdrop-filter: blur(4px);
+        /* Professional blur effect */
         z-index: 1;
     }
+
     .rts__banner__area .container-1520 {
         position: relative;
-        z-index: 2; /* Ensures text is above the blur/overlay */
+        z-index: 2;
+        /* Ensures text is above the blur/overlay */
     }
+
     .banner-title {
         text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
+
     .banner-content .desc {
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         color: rgba(255, 255, 255, 0.95) !important;
@@ -74,7 +81,7 @@
 <!-- rts banner area end -->
 
 <!-- rts service area two -->
-<section class="rts-service-area-two rts-section-gap ">
+<!-- <section class="rts-service-area-two rts-section-gap ">
     <div class="container-1428">
         <div class="section-title text-center">
             <span class="sub-title">Our Services</span>
@@ -120,11 +127,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts service area end -->
 
 <!-- rts about area two -->
-<section class="rts__about__area rts-section-gapBottom ">
+<!-- <section class="rts__about__area rts-section-gapBottom ">
     <div class="container">
         <div class="rts__about__wrapper">
             <div class="row g-30 align-items-center">
@@ -140,22 +147,6 @@
                 <div class="col-lg-5">
                     <div class="about__img style-1">
                         <img src="https://html.themewant.com/greenaro/assets/images/about/1.webp" alt="about">
-                        <!-- <div class="about__circle style-2">
-                            <div class="rts__circle rts__circle-2">
-                                <svg class="spinner" viewBox="0 0 100 100">
-                                    <defs>
-                                        <path id="circle-2" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
-                                    </defs>
-                                    <text>
-                                        <textPath class="style-2" xlink:href="#circle-2">EXPERTDESIGN . PREMIUMSERVICE . LANDSCAPING
-                                        </textPath>
-                                    </text>
-                                </svg>
-                                <div class="rts__circle--icon style-2">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -176,7 +167,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts about area end -->
 
 <!-- rts map area two -->
@@ -269,6 +260,41 @@
     </div>
 </section>
 <!-- rts project area end -->
+
+<section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
+    <div class="container-1428">
+        <div class="section-title text-center">
+            <span class="sub-title" style="color: white;">Our Services</span>
+            <h2 class="heading-title-two rts-text-anime" style="color: white;">Comprehensive Outdoor Solutions</h2>
+            <p>We offer a wide range of landscaping and property maintenance services designed to enhance the beauty and value of your property.</p>
+        </div>
+        <div class="blog__items__wrapper">
+            <div class="row g-30">
+                @foreach ($services as $service)
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
+                        <div class="thumb">
+                            <a href="#"><img src="{{ asset($service->feature_image) }}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;" alt="blog"></a>
+                        </div>
+                        <div class="content">
+                            <!-- <div class="top">
+                                <a href="#" class="link-btn">Learn</a>
+                                <p class="read" style="color: white;">5-minute read</p>
+                            </div> -->
+                            <h3 class="title" style="color: white;"><a href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a></h3>
+                            <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">{{ Str::limit($service->short_description, 60) }}</p>
+                            <div class="info">
+                                <!-- <h4 class="name" style="color: white;">Arslan Khan</h4> -->
+                                <span class="date" style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- rts choose area two -->
 <section class="rts__choose__area area-two rts-section-gap2 ">
@@ -522,7 +548,7 @@
 <!-- rts testimonial area end -->
 
 <!-- rts blog area tow -->
-<section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
+<!-- <section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
     <div class="container-1428">
         <div class="section-title text-center">
             <span class="sub-title" style="color: white;">Expert Advice</span>
@@ -587,6 +613,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- rts blog area end -->
 @endsection
