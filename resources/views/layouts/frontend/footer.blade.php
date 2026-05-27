@@ -41,10 +41,10 @@
                 <div class="single-widget">
                     <h3 class="widget-title" style="color: white;">Location & Contact:</h3>
                     <ul class="widget-list">
-                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Diamond Landscapes HQ</a></li>
-                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Your Office Address, City, State</a></li>
-                        <li><a href="tel:+1(234)567-890" style="color: rgba(255, 255, 255, 0.7);">+1 (234) 567-890</a></li>
-                        <li><a href="mailto:admin@diamondlandscapes" style="color: rgba(255, 255, 255, 0.7);">admin@diamondlandscapes</a></li>
+                        <!-- <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Diamond Landscapes HQ</a></li> -->
+                        <li><a href="https://maps.google.com/?q=Calgary,+Alberta" style="color: rgba(255, 255, 255, 0.7);"><b>Address:</b> Calgary, Alberta</a></li>
+                        <li><a href="tel:+14039191974" style="color: rgba(255, 255, 255, 0.7);"><b>Phone:</b> (403) 919-1974</a></li>
+                        <li><a href="mailto:admin@diamondlandscapes" style="color: rgba(255, 255, 255, 0.7);"><b>Email:</b> admin@diamondlandscapes</a></li>
                     </ul>
                 </div>
             </div>
