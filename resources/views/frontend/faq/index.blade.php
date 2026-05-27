@@ -3,12 +3,35 @@
 @section('title', 'FAQ | Diamond Landscapes')
 
 @section('content')
+<style>
+    .rts__breadcrumb__content {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .rts__breadcrumb__content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        /* black overlay */
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .rts__breadcrumb__content .list,
+    .rts__breadcrumb__content .title {
+        position: relative;
+        z-index: 2;
+    }
+</style>
 <!-- rts breadcrumb area start -->
 <section class="rts__breadcrumb__area ">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="rts__breadcrumb__content" data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
+                <div class="rts__breadcrumb__content" data-bg-src="{{ asset('services_page_bg.jpeg') }}">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
@@ -129,6 +152,7 @@
         background-color: transparent;
         padding: 80px 0;
     }
+
     .faq__accordion__wrapper .accordion-item {
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         margin-bottom: 15px;
@@ -137,10 +161,12 @@
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         overflow: hidden;
     }
+
     .faq__accordion__wrapper .accordion-item:hover {
         border-color: #34A853 !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
+
     .faq__accordion__wrapper .accordion-button {
         padding: 20px 25px !important;
         font-size: 18px !important;
@@ -153,15 +179,18 @@
         align-items: center !important;
         justify-content: space-between !important;
     }
+
     .faq__accordion__wrapper .accordion-button:not(.collapsed) {
         color: #34A853 !important;
         padding-bottom: 10px !important;
     }
+
     .faq__accordion__wrapper .accordion-button .text {
         display: flex !important;
         align-items: center !important;
         gap: 0 !important;
     }
+
     .faq__accordion__wrapper .accordion-button .number {
         font-size: 14px !important;
         color: #ffffff !important;
@@ -176,28 +205,34 @@
         background: rgba(255, 255, 255, 0.05) !important;
         transition: all 0.3s ease !important;
     }
+
     .faq__accordion__wrapper .accordion-button:not(.collapsed) .number {
         background: #34A853 !important;
         color: #ffffff !important;
     }
+
     .faq__accordion__wrapper .accordion-button .title {
         color: inherit !important;
         font-size: inherit !important;
         line-height: 1.4 !important;
     }
+
     .faq__accordion__wrapper .accordion-button .icon {
         font-size: 14px !important;
         color: #cbd5e0 !important;
         transition: transform 0.4s ease !important;
         margin-left: auto !important;
     }
+
     .faq__accordion__wrapper .accordion-button:not(.collapsed) .icon {
         color: #34A853 !important;
         transform: rotate(180deg) !important;
     }
+
     .faq__accordion__wrapper .accordion-button::after {
         display: none !important;
     }
+
     .faq__accordion__wrapper .accordion-body {
         padding: 0 25px 25px 80px !important;
         font-size: 16px !important;

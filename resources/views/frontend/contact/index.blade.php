@@ -8,6 +8,7 @@
         background-color: #ffffff;
         padding: 40px 0;
     }
+
     .faq__accordion__wrapper .accordion-item {
         border: 1px solid rgba(0, 37, 36, 0.08) !important;
         margin-bottom: 8px;
@@ -16,10 +17,12 @@
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         overflow: hidden;
     }
+
     .faq__accordion__wrapper .accordion-item:hover {
         border-color: #34A853 !important;
         box-shadow: 0 4px 12px rgba(0, 37, 36, 0.03);
     }
+
     .faq__accordion__wrapper .accordion-button {
         padding: 12px 15px !important;
         font-size: 16px !important;
@@ -32,15 +35,18 @@
         align-items: center !important;
         justify-content: space-between !important;
     }
+
     .faq__accordion__wrapper .accordion-button:not(.collapsed) {
         color: #34A853 !important;
         padding-bottom: 5px !important;
     }
+
     .faq__accordion__wrapper .accordion-button .text {
         display: flex !important;
         align-items: center !important;
         gap: 0 !important;
     }
+
     .faq__accordion__wrapper .accordion-button .number {
         font-size: 12px !important;
         color: #666 !important;
@@ -55,28 +61,34 @@
         background: #f4f6f4 !important;
         transition: all 0.3s ease !important;
     }
+
     .faq__accordion__wrapper .accordion-button:not(.collapsed) .number {
         background: #34A853 !important;
         color: #ffffff !important;
     }
+
     .faq__accordion__wrapper .accordion-button .title {
         color: inherit !important;
         font-size: inherit !important;
         line-height: 1.4 !important;
     }
+
     .faq__accordion__wrapper .accordion-button .icon {
         font-size: 12px !important;
         color: #cbd5e0 !important;
         transition: transform 0.4s ease !important;
         margin-left: auto !important;
     }
+
     .faq__accordion__wrapper .accordion-button:not(.collapsed) .icon {
         color: #34A853 !important;
         transform: rotate(180deg) !important;
     }
+
     .faq__accordion__wrapper .accordion-button::after {
         display: none !important;
     }
+
     .faq__accordion__wrapper .accordion-body {
         padding: 0 15px 12px 55px !important;
         font-size: 14px !important;
@@ -89,8 +101,10 @@
     .rts-contact-info-area {
         background: #ffffff !important;
     }
+
     .single-contact-info {
-        background: #002524 !important; /* Deep Dark Green */
+        background: #002524 !important;
+        /* Deep Dark Green */
         padding: 40px 30px !important;
         border-radius: 16px !important;
         border: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -101,12 +115,15 @@
         align-items: flex-start !important;
         text-align: left !important;
     }
+
     .single-contact-info:hover {
         transform: translateY(-10px) !important;
         box-shadow: 0 20px 40px rgba(0, 37, 36, 0.2) !important;
-        background: #003635 !important; /* Slightly lighter on hover */
+        background: #003635 !important;
+        /* Slightly lighter on hover */
         border-color: #34A853 !important;
     }
+
     .single-contact-info .icon {
         width: 60px !important;
         height: 60px !important;
@@ -119,16 +136,20 @@
         transition: all 0.3s ease !important;
         border: 1px solid rgba(52, 168, 83, 0.2) !important;
     }
+
     .single-contact-info .icon svg path {
         stroke: #34A853 !important;
     }
+
     .single-contact-info:hover .icon {
         background: #34A853 !important;
         border-color: #34A853 !important;
     }
+
     .single-contact-info:hover .icon svg path {
         stroke: #ffffff !important;
     }
+
     .single-contact-info .content .title {
         display: block !important;
         font-size: 13px !important;
@@ -138,6 +159,7 @@
         letter-spacing: 1.5px !important;
         margin-bottom: 12px !important;
     }
+
     .single-contact-info .content a {
         font-size: 20px !important;
         font-weight: 600 !important;
@@ -147,8 +169,31 @@
         line-height: 1.3 !important;
         display: block !important;
     }
+
     .single-contact-info .content a:hover {
         color: #34A853 !important;
+    }
+
+    .rts__breadcrumb__content {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .rts__breadcrumb__content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        /* black overlay */
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .rts__breadcrumb__content .list,
+    .rts__breadcrumb__content .title {
+        position: relative;
+        z-index: 2;
     }
 </style>
 <!-- rts breadcrumb area start -->
@@ -156,7 +201,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="rts__breadcrumb__content" data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
+                <div class="rts__breadcrumb__content" data-bg-src="{{ asset('contact_page_bg.jpeg') }}">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
@@ -185,7 +230,7 @@
         <i class="fas fa-exclamation-circle me-2"></i> <strong>Error!</strong> Please fix the following:
         <ul class="mb-0 mt-2">
             @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
             @endforeach
         </ul>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -221,7 +266,7 @@
                         </div>
                         <div class="content">
                             <span class="title">Call Us</span>
-                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            <a href="tel:+14039191974">(403) 919-1974</a>
                         </div>
                     </div>
                 </div>
@@ -239,7 +284,7 @@
                         </div>
                         <div class="content">
                             <span class="title">Our Location</span>
-                            <a href="#">Your Office Address, City, State</a>
+                            <a href="https://maps.google.com/?q=Calgary,+Alberta" target="_blank">Calgary, Alberta</a>
                         </div>
                     </div>
                 </div>
@@ -320,7 +365,13 @@
                             </div>
                         </div>
                         <div class="rts__contact__info__map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29208.72412242517!2d90.42666760000002!3d23.7797909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1759116516178!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps?q=Calgary,Alberta,Canada&output=embed"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>

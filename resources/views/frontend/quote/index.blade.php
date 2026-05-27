@@ -3,12 +3,35 @@
 @section('title', 'Request a Quote | Diamond Landscapes')
 
 @section('content')
+<style>
+    .rts__breadcrumb__content {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .rts__breadcrumb__content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        /* black overlay */
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .rts__breadcrumb__content .list,
+    .rts__breadcrumb__content .title {
+        position: relative;
+        z-index: 2;
+    }
+</style>
 <!-- rts breadcrumb area start -->
 <section class="rts__breadcrumb__area ">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="rts__breadcrumb__content" data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
+                <div class="rts__breadcrumb__content" data-bg-src="{{ asset('services_page_bg.jpeg') }}">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
@@ -64,7 +87,7 @@
                                     <select name="service_id" id="service_id" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;" required>
                                         <option value="">Select a Service</option>
                                         @foreach($services as $service)
-                                            <option value="{{ $service->id }}">{{ $service->name }}</option>
+                                        <option value="{{ $service->id }}">{{ $service->name }}</option>
                                         @endforeach
                                         <option value="commercial_maintenance">Commercial Maintenance Contract</option>
                                     </select>
@@ -107,13 +130,13 @@
     document.addEventListener('DOMContentLoaded', function() {
         $('#quoteForm').on('submit', function(e) {
             e.preventDefault();
-            
+
             let form = $(this);
             let submitBtn = $('#submitBtn');
             let formData = form.serialize();
-            
+
             submitBtn.prop('disabled', true).html('Sending... <i class="fa-solid fa-spinner fa-spin ms-2"></i>');
-            
+
             $.ajax({
                 url: form.attr('action'),
                 type: 'POST',
@@ -133,7 +156,7 @@
                     if (xhr.responseJSON && xhr.responseJSON.message) {
                         errorMessage = xhr.responseJSON.message;
                     }
-                    
+
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',

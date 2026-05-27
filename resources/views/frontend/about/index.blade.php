@@ -174,7 +174,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="rts__breadcrumb__content"
-                        data-bg-src="https://html.themewant.com/greenaro/assets/images/breadcrumb/bg.webp">
+                        data-bg-src="{{ asset('about_page_bg.jpeg') }}">
                         <ul class="list">
                             <li><a href="{{ route('home') }}">Home</a></li>
                             <li><i class="fa-solid fa-chevron-right"></i></li>

@@ -179,6 +179,28 @@
         color: #555555 !important;
         background: transparent !important;
     }
+
+    .rts__breadcrumb__content {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .rts__breadcrumb__content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        /* black overlay */
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .rts__breadcrumb__content .list,
+    .rts__breadcrumb__content .title {
+        position: relative;
+        z-index: 2;
+    }
 </style>
 
 @if(session('success'))
@@ -301,7 +323,7 @@
                                 </div>
                             </div>
                         </div> -->
-                        
+
                         <!-- <div class="service__widget">
                                 <div class="service__widget__title border-0">
                                     <h3>Download</h3>

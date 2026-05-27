@@ -3,7 +3,7 @@
         <div class="logo">
             <a href="{{ route('home') }}">
                 <img src="{{ asset('logo.png') }}" class="mb-2 mt-2" alt="logo"
-                    style="max-height: 50px; width: auto; transition: all 0.3s ease;">
+                    style="max-height: 70px; width: auto; transition: all 0.3s ease;">
             </a>
         </div>
     </div>
@@ -47,6 +47,20 @@
                                 @endforeach
                             @endforeach
                         </ul>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('gallery') }}"
+                            class="{{ request()->routeIs('gallery') ? 'active-menu' : '' }}" style="color: white;">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('quote') }}"
+                            class="{{ request()->routeIs('quote') ? 'active-menu' : '' }}" style="color: white;">
+                            Get a Quote
+                        </a>
                     </li>
 
                     <li>
