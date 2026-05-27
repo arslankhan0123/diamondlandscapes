@@ -23,7 +23,7 @@
                     <li>
                         <a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active-menu' : '' }}"
                             style="color: white;">
-                            About us
+                            About
                         </a>
                     </li>
 
@@ -35,16 +35,24 @@
 
                         <ul class="sub-menu">
                             @foreach($header_categories as $category)
-                                <li class="menu-item-category">
-                                    <span class="category-label">{{ $category->name }}</span>
-                                </li>
-                                @foreach($category->services as $service)
-                                    <li class="menu-item-service">
-                                        <a href="{{ route('services.details', $service->id) }}">
-                                            <i class="fa-solid fa-arrow-right-long"></i> {{ $service->name }}
+                                @if(stripos($category->name, 'irrigation') !== false)
+                                    <li class="menu-item-category" style="cursor: pointer;">
+                                        <a href="{{ route('services') }}?category={{ $category->slug }}" class="category-label" style="display: block; text-decoration: none;">
+                                            {{ $category->name }}
                                         </a>
                                     </li>
-                                @endforeach
+                                @else
+                                    <li class="menu-item-category">
+                                        <span class="category-label">{{ $category->name }}</span>
+                                    </li>
+                                    @foreach($category->services as $service)
+                                        <li class="menu-item-service">
+                                            <a href="{{ route('services.details', $service->id) }}">
+                                                <i class="fa-solid fa-arrow-right-long"></i> {{ $service->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                @endif
                             @endforeach
                         </ul>
                     </li>
