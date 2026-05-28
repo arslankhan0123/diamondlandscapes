@@ -106,10 +106,10 @@
 
     .category-label {
         display: block;
-        padding: 8px 20px;
-        font-weight: 800;
-        text-transform: uppercase;
-        font-size: 12px;
+        padding: 8px 20px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        font-size: 12px !important;
         letter-spacing: 0.5px;
         color: #001a19 !important;
         background: #f8f9fa;
