@@ -482,7 +482,7 @@
     <!-- rts choose area end -->
 
     <!-- rts team area two -->
-    <section class="rts__team__area area-one rts-section-gap ">
+    <!-- <section class="rts__team__area area-one rts-section-gap ">
         <div class="container">
             <div class="section__title__area">
                 <div class="section-title">
@@ -576,7 +576,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- rts team area end -->
 
     <!-- rts testimonial area two -->

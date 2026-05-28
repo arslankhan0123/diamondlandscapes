@@ -253,7 +253,7 @@
                         </div>
                         <div class="content">
                             <span class="title">Email Us</span>
-                            <a href="mailto:admin@diamondlandscapes">admin@diamondlandscapes</a>
+                            <a href="mailto:info@diamondlandscapes.ca">info@diamondlandscapes.ca</a>
                         </div>
                     </div>
                 </div>
@@ -299,7 +299,7 @@
     <div class="container-1428">
         <div class="rts__contact__wrapper">
             <div class="row gy-5 align-items-end">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="rts__contact__form">
                         <div class="section-title">
                             <span class="sub-title">Contact</span>
@@ -354,16 +354,16 @@
                         <div id="form-messages" class="mt-10"></div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="rts__contact__info">
-                        <div class="rts__contact__info__social">
+                        <!-- <div class="rts__contact__info__social">
                             <p>Follow us on Socials:</p>
                             <div class="social__list">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="rts__contact__info__map">
                             <iframe
                                 src="https://www.google.com/maps?q=Calgary,Alberta,Canada&output=embed"
