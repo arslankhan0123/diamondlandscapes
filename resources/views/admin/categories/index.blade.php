@@ -27,7 +27,7 @@
                     <table id="custom-table" class="table table-hover align-middle">
                         <thead>
                             <tr>
-                                <th style="width: 50px;">#</th>
+                                <th style="width: 80px;">Order</th>
                                 <th>Category Name</th>
                                 <th>Slug</th>
                                 <th style="width: 120px;">Status</th>
@@ -36,8 +36,13 @@
                         </thead>
                         <tbody>
                             @foreach($categories as $category)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
+                            <tr data-id="{{ $category->id }}">
+                                <td>
+                                    <span class="drag-handle" style="cursor: move; margin-right: 8px;">
+                                        <i class="fas fa-grip-vertical text-muted"></i>
+                                    </span>
+                                    {{ $loop->iteration }}
+                                </td>
                                 <td>
                                     <div class="fw-bold text-dark">{{ $category->name }}</div>
                                 </td>
@@ -98,4 +103,53 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const tbody = document.querySelector('#custom-table tbody');
+        if (tbody) {
+            new Sortable(tbody, {
+                handle: '.drag-handle',
+                animation: 150,
+                onEnd: function() {
+                    let order = [];
+                    $('#custom-table tbody tr').each(function() {
+                        let id = $(this).data('id');
+                        if (id) {
+                            order.push(id);
+                        }
+                    });
+
+                    $.ajax({
+                        url: "{{ route('categories.reorder') }}",
+                        method: "POST",
+                        data: {
+                            _token: "{{ csrf_token() }}",
+                            order: order
+                        },
+                        success: function(response) {
+                            if (response.status === 'success') {
+                                toastr.success(response.message);
+                                // Update loop numbers visually
+                                $('#custom-table tbody tr').each(function(index) {
+                                    $(this).find('td:first-child').html(
+                                        `<span class="drag-handle" style="cursor: move; margin-right: 8px;">
+                                            <i class="fas fa-grip-vertical text-muted"></i>
+                                        </span>` + (index + 1)
+                                    );
+                                });
+                            }
+                        },
+                        error: function(xhr) {
+                            toastr.error('Something went wrong. Please try again.');
+                        }
+                    });
+                }
+            });
+        }
+    });
+</script>
 @endsection

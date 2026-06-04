@@ -13,8 +13,25 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::latest()->get();
+        $categories = Category::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
         return view('admin.categories.index', compact('categories'));
+    }
+
+    /**
+     * Reorder categories via AJAX.
+     */
+    public function reorder(Request $request)
+    {
+        $request->validate([
+            'order' => 'required|array',
+            'order.*' => 'integer|exists:categories,id',
+        ]);
+
+        foreach ($request->order as $index => $id) {
+            Category::where('id', $id)->update(['order' => $index]);
+        }
+
+        return response()->json(['status' => 'success', 'message' => 'Categories reordered successfully.']);
     }
 
     /**
