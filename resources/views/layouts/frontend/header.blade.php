@@ -37,7 +37,7 @@
                             @foreach($header_categories as $category)
                                 @if(stripos($category->name, 'irrigation') !== false)
                                     <li class="menu-item-category" style="cursor: pointer;">
-                                        <a href="{{ route('services') }}?category={{ $category->slug }}" class="category-label" style="display: block; text-decoration: none;">
+                                        <a href="{{ route('services') }}?category={{ $category->slug }}" class="category-label" style="display: block; color:black !important; text-decoration: none;">
                                             {{ $category->name }}
                                         </a>
                                     </li>

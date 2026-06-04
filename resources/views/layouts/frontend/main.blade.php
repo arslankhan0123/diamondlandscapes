@@ -22,7 +22,7 @@
     <!-- Bootstrap Css -->
     <link rel="preload" href="https://html.themewant.com/greenaro/assets/css/plugins/bootstrap.min.css" as="style">
     <!-- Fontawesome Css -->
-    <link rel="preload" href="https://html.themewant.com/greenaro/assets/css/plugins/fontawesome.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <!-- Animate css -->
     <link rel="preload" href="https://html.themewant.com/greenaro/assets/css/plugins/animate.css" as="style">
     <!-- Magnific Popup Css -->
@@ -39,7 +39,7 @@
     <!-- Bootstrap Css -->
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/plugins/bootstrap.min.css">
     <!-- Fontawesome Css -->
-    <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Animate css -->
     <link rel="stylesheet" href="https://html.themewant.com/greenaro/assets/css/plugins/animate.css">
     <!-- Magnific Popup Css -->
