@@ -10,7 +10,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $services = Service::where('status', 'active')->with('highlights')->latest()->take(4)->get();
+        $services = Service::where('status', 'active')->with('highlights')->latest()->take(15)->get();
         return view('welcome', compact('services'));
     }
 
