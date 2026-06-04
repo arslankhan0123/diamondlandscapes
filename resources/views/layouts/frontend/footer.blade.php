@@ -57,6 +57,7 @@
     </div>
     <div class="footer__copyright__wrapper">
         <div class="container">
+            <p style="color: rgba(255, 255, 255, 0.7); text-align: center; margin-bottom: 0;"><b>Service Areas:</b> Calgary, Chestermere, Airdrie, Okotoks, Cochrane</p>
             <div class="footer__copyright">
                 <div class="copyright">
                     <p>

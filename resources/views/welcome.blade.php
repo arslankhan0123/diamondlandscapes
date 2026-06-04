@@ -283,8 +283,8 @@
                                         style="width: 100%; max-height: 300px; object-fit: cover;" alt="img"></a>
                             </div>
                             <div class="content">
-                                <h3 class="title"><a href="#">Luxury Patio & Hardscape</a></h3>
-                                <p class="desc">Residential Project 2026</p>
+                                <h3 class="title"><a href="#">Backyard Patio Upgrade</a></h3>
+                                <p class="desc">Transform your outdoor space with our premium patio upgrade services.</p>
                             </div>
                         </div>
                     </div>
@@ -295,8 +295,8 @@
                                         style="width: 100%; max-height: 400px; object-fit: cover;" alt="img"></a>
                             </div>
                             <div class="content">
-                                <h3 class="title"><a href="#">Commercial Grounds Upkeep</a></h3>
-                                <p class="desc">Corporate HQ 2026</p>
+                                <h3 class="title"><a href="#">Spring Cleanup</a></h3>
+                                <p class="desc">Prepare your property for the new season with our comprehensive spring cleanup services.</p>
                             </div>
                         </div>
                     </div>
@@ -307,8 +307,8 @@
                                         style="width: 100%; max-height: 300px; object-fit: cover;" alt="img"></a>
                             </div>
                             <div class="content">
-                                <h3 class="title"><a href="#">Custom Deck & Pergola</a></h3>
-                                <p class="desc">Backyard Oasis 2026</p>
+                                <h3 class="title"><a href="#">Front Yard Rock Installation</a></h3>
+                                <p class="desc">Enhance your front yard with our custom rock installation services.</p>
                             </div>
                         </div>
                     </div>
