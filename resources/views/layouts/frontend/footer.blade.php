@@ -3,7 +3,7 @@
         <div class="footer-contact-info text-center">
             <span class="subtitle" style="color: #34A853;">Artistry in Every Acre</span>
             <h2 class="title" style="color: white;">Transform Your Property with <br> Diamond Landscapes</h2>
-            <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Consultation <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="{{ route('contact') }}" class="rts-btn btn-primary">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="footer-brand-widget">
             <div class="footer-brand" style="max-width: 350px;">
@@ -27,15 +27,20 @@
                         <li><a href="{{ route('about') }}">About</a></li>
                         <li><a href="{{ route('services') }}">Services</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="single-widget">
-                    <h3 class="widget-title">Helpful Resources:</h3>
-                    <ul class="widget-list">
                         <li><a href="{{ route('faq') }}">FAQs</a></li>
                         <li><a href="{{ route('gallery') }}">Our Gallery</a></li>
                         <!-- <li><a href="{{ route('reviews') }}">Reviews</a></li> -->
                         <li><a href="{{ route('quote') }}">Request a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="single-widget">
+                    <h3 class="widget-title">Why Choose Us:</h3>
+                    <ul class="widget-list">
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Fully Insured</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Residential & Commercial</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Free Estimates</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Locally Owned & Operated</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Reliable Year-Round Service</li>
                     </ul>
                 </div>
                 <div class="single-widget">
