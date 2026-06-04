@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
         $views = ['layouts.frontend.header', 'layouts.frontend.footer'];
         View::composer($views, function ($view) {
             $view->with('header_services', Service::where('status', 'active')->get());
-            $view->with('header_categories', Category::where('status', 'active')->with(['services' => function($query) {
+            $view->with('header_categories', Category::where('status', 'active')->orderBy('order', 'asc')->orderBy('id', 'asc')->with(['services' => function($query) {
                 $query->where('status', 'active');
             }])->get());
         });
