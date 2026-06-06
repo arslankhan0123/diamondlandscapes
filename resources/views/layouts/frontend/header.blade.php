@@ -35,7 +35,7 @@
 
                         <ul class="sub-menu">
                             @foreach($header_categories as $category)
-                                @if(stripos($category->name, 'irrigation') !== false)
+                                @if(stripos($category->name, 'irrigation') !== false || stripos($category->name, 'landscaping') !== false)
                                     <li class="menu-item-category" style="cursor: pointer;">
                                         <a href="{{ route('services') }}?category={{ $category->slug }}" class="category-label" style="display: block; color:black !important; text-decoration: none;">
                                             {{ $category->name }}

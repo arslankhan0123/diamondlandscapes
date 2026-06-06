@@ -23,7 +23,7 @@ Route::get('/faq', [FrontendController::class, 'faq'])->name('faq');
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/quote/store', [QuoteController::class, 'store'])->name('quote.store');
 Route::group(['prefix' => '/services'], function () {
-    Route::get('/', [FrontendController::class, 'services'])->name('services');
+    Route::get('/all', [FrontendController::class, 'services'])->name('services');
     Route::get('/details/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
 });
 

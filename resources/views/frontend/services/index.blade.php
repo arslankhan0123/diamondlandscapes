@@ -53,7 +53,7 @@
 <section class="rts-service-inner-area rts-section-gap ">
     <div class="container">
         <div class="rts-service-inner-wrapper">
-            @if($selected_category && stripos($selected_category->name, 'irrigation') !== false)
+            @if($selected_category && (stripos($selected_category->name, 'irrigation') !== false || stripos($selected_category->name, 'landscaping') !== false))
                 <div class="irrigation-services-details pt-5">
                     @forelse($services as $index => $service)
                     <div class="service-detail-card mb-5 wow fadeInUp" data-wow-delay=".{{ ($loop->index % 5) + 2 }}s" style="background: #fff; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,37,36,0.06); overflow: hidden; border: 1px solid rgba(0,37,36,0.04);">
@@ -74,7 +74,7 @@
                                     </div>
                                     <div style="margin-top: 35px;">
                                         <a href="{{ route('quote') }}" class="rts-btn btn-primary" style="padding: 12px 30px; font-weight: 600; border-radius: 8px;">
-                                            Get a Quote <i class="fa-regular fa-arrow-right ms-2"></i>
+                                            Get a Quote <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
