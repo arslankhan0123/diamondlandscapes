@@ -34,7 +34,65 @@
                         </a>
 
                         <ul class="sub-menu">
+                            @php
+                                $landscaping = $header_categories->first(function($cat) {
+                                    return stripos($cat->name, 'landscaping') !== false;
+                                });
+                            @endphp
+
                             @foreach($header_categories as $category)
+
+                                {{-- Landscaping ko alag se render nahi karna --}}
+                                @if(stripos($category->name, 'landscaping') !== false)
+                                    @continue
+
+                                {{-- Irrigation jaisa pehle tha --}}
+                                @elseif(stripos($category->name, 'irrigation') !== false)
+                                    <!-- <li class="menu-item-category" style="cursor: pointer;">
+                                        <a href="{{ route('services') }}?category={{ $category->slug }}"
+                                        class="category-label"
+                                        style="display:block;color:black !important;text-decoration:none;">
+                                            {{ $category->name }}
+                                        </a>
+                                    </li> -->
+                                    <li class="menu-item-category">
+                                        <span class="category-label">{{ $category->name }}</span>
+                                    </li>
+                                    <li class="menu-item-service">
+                                        <a href="{{ route('services') }}?category={{ $category->slug }}">
+                                            <i class="fa-solid fa-arrow-right-long"></i> Irrigation Installations
+                                        </a>
+                                    </li>
+
+                                @else
+
+                                    <li class="menu-item-category">
+                                        <span class="category-label">{{ $category->name }}</span>
+                                    </li>
+
+                                    {{-- Property Maintenance ke niche Landscaping service ki tarah show karo --}}
+                                    @if(stripos($category->name, 'property maintenance') !== false && $landscaping)
+                                        <li class="menu-item-service">
+                                            <a href="{{ route('services') }}?category={{ $landscaping->slug }}">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                                {{ $landscaping->name }}
+                                            </a>
+                                        </li>
+                                    @endif
+
+                                    @foreach($category->services as $service)
+                                        <li class="menu-item-service">
+                                            <a href="{{ route('services.details', $service->id) }}">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                                {{ $service->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+
+                                @endif
+
+                            @endforeach
+                            <!-- @foreach($header_categories as $category)
                                 @if(stripos($category->name, 'irrigation') !== false || stripos($category->name, 'landscaping') !== false)
                                     <li class="menu-item-category" style="cursor: pointer;">
                                         <a href="{{ route('services') }}?category={{ $category->slug }}" class="category-label" style="display: block; color:black !important; text-decoration: none;">
@@ -53,7 +111,7 @@
                                         </li>
                                     @endforeach
                                 @endif
-                            @endforeach
+                            @endforeach -->
                         </ul>
                     </li>
 
