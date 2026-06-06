@@ -87,7 +87,8 @@
         <div class="main__right__btn">
             <a href="{{ route('contact') }}" class="rts-btn btn-primary">
                 Contact us
-                <i class="fa-regular fa-arrow-right"></i>
+                <!-- <i class="fa-regular fa-arrow-right"></i> -->
+                <!-- <i class="fa-solid fa-arrow-right"></i> -->
             </a>
         </div>
 

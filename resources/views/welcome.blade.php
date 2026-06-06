@@ -101,7 +101,7 @@
         </div>
     @endif
     <!-- rts banner area two -->
-    <section class="rts__banner__area " data-bg-src="{{ asset('frontend/assets/images/1.jpg') }}"
+    <section class="rts__banner__area " data-bg-src="{{ asset('services/6.jpg') }}"
         style="background-size: cover; background-position: center;">
         <div class="container-1520">
             <div class="rts-banner-wrapper-two">
@@ -381,10 +381,12 @@
                 </div>
                 <!-- Navigation Buttons Moved Outside Swiper -->
                 <button class="rts-btn-prev service-prev">
-                    <i class="fa-light fa-chevron-left"></i>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <!-- <i class="fa-light fa-chevron-left"></i> -->
                 </button>
                 <button class="rts-btn-next service-next">
-                    <i class="fa-light fa-chevron-right"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <!-- <i class="fa-light fa-chevron-right"></i> -->
                 </button>
             </div>
         </div>
