@@ -145,15 +145,17 @@
                     @php
                     $gallery_items = [
                     ['img' => '5.jpg', 'title' => 'Custom Stone Patio', 'cat' => 'Hardscape'],
+                    ['img' => '15.JPEG', 'title' => 'Fresh Sod Lawn Installation', 'cat' => 'Landscaping / Sod Installation / Lawn Services'],
                     ['img' => '6.jpg', 'title' => 'Modern Cedar Deck', 'cat' => 'Decks'],
+                    ['img' => '14.JPEG', 'title' => 'Sod Installation', 'cat' => 'Landscaping / Lawn Installation'],
                     ['img' => '7.jpg', 'title' => 'Office Park Maintenance', 'cat' => 'Commercial'],
+                    ['img' => '13.JPEG', 'title' => 'Mulch Installation', 'cat' => 'Landscaping / Mulching Services'],
                     ['img' => '3.jpg', 'title' => 'Smart Sprinkler System', 'cat' => 'Irrigation'],
+                    ['img' => '16.jpg', 'title' => 'Bark Mulch Installation', 'cat' => 'Landscaping / Mulch Installation / Garden Bed Services'],
                     ['img' => '2.jpg', 'title' => 'Lawn Restoration', 'cat' => 'Before & After'],
+                    ['img' => '12.JPEG', 'title' => 'Decorative Rock Installation', 'cat' => 'Landscaping / Rock & Gravel Installation'],
                     ['img' => '1.jpg', 'title' => 'Retaining Wall', 'cat' => 'Hardscape'],
-                    ['img' => '5.jpg', 'title' => 'Stone Walkway', 'cat' => 'Hardscape'],
-                    ['img' => '6.jpg', 'title' => 'Composite Decking', 'cat' => 'Decks'],
-                    ['img' => '7.jpg', 'title' => 'Retail Center Care', 'cat' => 'Commercial'],
-                    ['img' => '3.jpg', 'title' => 'Drip Irrigation', 'cat' => 'Irrigation'],
+                    ['img' => '11.JPEG', 'title' => 'Weed Barrier Fabric Installation', 'cat' => 'Landscaping / Weed Control / Ground Preparation'],
                     ];
                     @endphp
 
@@ -175,15 +177,97 @@
 
             <!-- Navigation Buttons -->
             <button class="rts-btn-prev gallery-prev">
-                <i class="fa-light fa-chevron-left"></i>
+                <i class="fa-solid fa-arrow-left"></i>
+                <!-- <i class="fa-light fa-chevron-left"></i> -->
             </button>
             <button class="rts-btn-next gallery-next">
-                <i class="fa-light fa-chevron-right"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+                <!-- <i class="fa-light fa-chevron-right"></i> -->
             </button>
         </div>
     </div>
 </div>
 <!-- gallery area end -->
+
+<!-- Gallery Cards Grid -->
+<div class="container mt-5">
+    <div class="row g-4">
+        @foreach ($gallery_items as $index => $item)
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="{{ $index * 100 }}">
+
+            <div class="gallery-card h-100">
+                <div class="gallery-image-wrapper">
+                    <img src="{{ asset('frontend/assets/images/' . $item['img']) }}"
+                        alt="{{ $item['title'] }}"
+                        class="gallery-image">
+                </div>
+
+                <div class="gallery-card-content">
+                    <h5>{{ $item['title'] }}</h5>
+                    <span>{{ $item['cat'] }}</span>
+                </div>
+            </div>
+
+        </div>
+        @endforeach
+    </div>
+</div>
+
+<style>
+    /* Gallery Cards */
+.gallery-card {
+    background: #012b29;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 1px solid rgba(255,255,255,0.08);
+    transform: translateY(0);
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.gallery-image-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-card:hover .gallery-image {
+    transform: scale(1.08);
+}
+
+.gallery-card-content {
+    padding: 20px;
+}
+
+.gallery-card-content h5 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.gallery-card-content span {
+    color: #34A853;
+    font-size: 14px;
+}
+
+.gallery-card:hover h5 {
+    color: #34A853;
+}
+</style>
 
 <script>
     window.addEventListener('load', function() {
@@ -217,6 +301,16 @@
                 }
             });
         }
+    });
+</script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 900,
+        once: true
     });
 </script>
 @endsection
